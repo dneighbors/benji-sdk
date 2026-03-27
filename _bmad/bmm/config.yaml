@@ -1,0 +1,16 @@
+# BMM Module Configuration
+# Manually initialized for benji-sdk (BMAD Method v6.2.2)
+# Date: 2026-03-26
+
+project_name: benji-sdk
+user_skill_level: expert
+planning_artifacts: "{project-root}/_bmad-output/planning-artifacts"
+implementation_artifacts: "{project-root}/_bmad-output/implementation-artifacts"
+sprint_artifacts: "{project-root}/_bmad-output/sprint-artifacts"
+project_knowledge: "{project-root}/docs"
+tea_use_mcp_enhancements: false
+tea_use_playwright_utils: false
+user_name: derek
+communication_language: English
+document_output_language: English
+output_folder: "{project-root}/_bmad-output"
