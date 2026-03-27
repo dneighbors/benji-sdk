@@ -2,7 +2,7 @@
 # project: benji-sdk
 # project_key: benji
 # tracking_system: file-system
-# story_location: _bmad-output/implementation-artifacts
+# story_location: _bmad-output/sprint-artifacts
 
 # STATUS DEFINITIONS:
 # ==================
@@ -33,7 +33,7 @@ generated: 2026-03-26
 project: benji-sdk
 project_key: benji
 tracking_system: file-system
-story_location: _bmad-output/implementation-artifacts
+story_location: _bmad-output/sprint-artifacts
 
 development_status:
   # Epic 1: Monorepo + Core Infrastructure
