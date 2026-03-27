@@ -37,3 +37,8 @@ export function configure(options: BenjiConfig) {
 }
 
 export { client };
+
+// Error types and utilities
+export { BenjiError, BenjiConfigError, BenjiApiError } from "./errors.js";
+export { initializeFromEnv } from "./env.js";
+export { wrapSdkCall } from "./wrapper.js";
