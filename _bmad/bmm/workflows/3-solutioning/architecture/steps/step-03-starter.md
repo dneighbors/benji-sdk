@@ -231,7 +231,6 @@ Prepare the content to append to the document:
 ```bash
 {{full_starter_command_with_options}}
 ```
-````
 
 **Architectural Decisions Provided by Starter:**
 
@@ -254,8 +253,7 @@ Prepare the content to append to the document:
 {{development_tools_and_workflow}}
 
 **Note:** Project initialization using this command should be the first implementation story.
-
-```
+````
 
 ### 9. Present Content and Menu
 
@@ -327,4 +325,3 @@ When user selects 'C', append the content directly to the document using the str
 After user selects 'C' and content is saved to document, load `./step-04-decisions.md` to begin making specific architectural decisions.
 
 Remember: Do NOT proceed to step-04 until user explicitly selects 'C' from the A/P/C menu and content is saved!
-```

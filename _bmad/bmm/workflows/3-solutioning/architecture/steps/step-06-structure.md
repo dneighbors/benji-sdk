@@ -240,11 +240,8 @@ Prepare the content to append to the document:
 ## Project Structure & Boundaries
 
 ### Complete Project Directory Structure
-```
 
 {{complete_project_tree_with_all_files_and_directories}}
-
-```
 
 ### Architectural Boundaries
 
