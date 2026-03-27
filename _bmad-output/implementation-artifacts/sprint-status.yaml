@@ -1,0 +1,94 @@
+# generated: 2026-03-26
+# project: benji-sdk
+# project_key: benji
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic exists in epic file but not contexted
+#   - contexted or in-progress
+#   - done: Epic completed
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - drafted: Story file created in stories folder by *create-story
+#   - ready-for-dev: Draft approved and story context created by *story-ready
+#   - in-progress: Developer actively working on implementation by *dev-story
+#   - review: Implementation complete, ready for review by *code-review
+#   - done: Story completed by *story-done
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - completed: Retrospective has been done by *retrospective
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epics should be marked `in-progress` before stories can be marked beyond `backlog`
+# - SM typically drafts next story ONLY after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', dev reviews, then Dev moves to 'done'
+
+generated: 2026-03-26
+project: benji-sdk
+project_key: benji
+tracking_system: file-system
+story_location: _bmad-output/implementation-artifacts
+
+development_status:
+  # Epic 1: Monorepo + Core Infrastructure
+  epic-1: backlog
+  1-1-convert-to-pnpm-workspace-monorepo: backlog
+  1-2-scaffold-mcp-and-cli-packages: backlog
+  1-3-shared-error-handling-and-auth: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: MCP Server — Existing SDK Resources (Phase 1)
+  epic-2: backlog
+  2-1-scaffold-mcp-server-with-stdio-transport: backlog
+  2-2-todo-tools: backlog
+  2-3-tag-tools: backlog
+  2-4-project-tools: backlog
+  2-5-todo-list-tools: backlog
+  2-6-habit-tools: backlog
+  2-7-mood-tools: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: MCP Server — Existing SDK Resources (Phase 2)
+  epic-3: backlog
+  3-1-hydration-tools: backlog
+  3-2-fasting-tools: backlog
+  3-3-workout-tools: backlog
+  3-4-journal-tools: backlog
+  3-5-pain-event-tools: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: SDK Update — New Alpha API Resources
+  epic-4: backlog
+  4-1-update-openapi-spec-from-alpha: backlog
+  4-2-regenerate-sdk-and-fix-build: backlog
+  4-3-verify-new-resource-classes: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: MCP Server — Newly Added Resources
+  epic-5: backlog
+  5-1-weight-log-tools: backlog
+  5-2-todo-view-tools: backlog
+  5-3-project-section-tools: backlog
+  5-4-todo-list-section-tools: backlog
+  5-5-goals-contacts-food-blood-pressure-tools: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: CLI
+  epic-6: backlog
+  6-1-scaffold-cli-package: backlog
+  6-2-implement-core-commands: backlog
+  6-3-output-formatting: backlog
+  epic-6-retrospective: optional
+
+  # Epic 7: Documentation & Polish
+  epic-7: backlog
+  7-1-readme-and-mcp-usage-docs: backlog
+  7-2-claude-md-and-config-snippets: backlog
+  7-3-env-var-docs-and-troubleshooting: backlog
+  epic-7-retrospective: optional
