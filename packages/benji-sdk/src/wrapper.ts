@@ -33,12 +33,12 @@ export async function wrapSdkCall<T>(
   }
 
   if (result.error) {
-    const status = result.response.status;
+    const status = result.response?.status ?? 0;
     const err = result.error as { message?: string; code?: string; issues?: Array<{ message: string }> };
     throw new BenjiApiError({
       status,
-      code: err.code ?? `HTTP_${status}`,
-      message: err.message ?? `API request failed with status ${status}`,
+      code: err.code ?? (status === 0 ? "NETWORK_ERROR" : `HTTP_${status}`),
+      message: err.message ?? (status === 0 ? "Network request failed" : `API request failed with status ${status}`),
       issues: err.issues,
     });
   }
