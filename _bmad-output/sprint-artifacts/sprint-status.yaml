@@ -44,8 +44,8 @@ development_status:
   epic-1-retrospective: optional
 
   # Epic 2: MCP Server — Existing SDK Resources (Phase 1)
-  epic-2: backlog
-  2-1-scaffold-mcp-server-with-stdio-transport: backlog
+  epic-2: in-progress
+  2-1-scaffold-mcp-server-with-stdio-transport: done
   2-2-todo-tools: backlog
   2-3-tag-tools: backlog
   2-4-project-tools: backlog
