@@ -1,6 +1,9 @@
 import { createRequire } from "node:module";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerTodoTools } from "./tools/todos.js";
+import { registerTagTools } from "./tools/tags.js";
+import { registerProjectTools } from "./tools/projects.js";
+import { registerTodoListTools } from "./tools/todo-lists.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -24,6 +27,9 @@ export function createServer(): McpServer {
   );
 
   registerTodoTools(mcpServer);
+  registerTagTools(mcpServer);
+  registerProjectTools(mcpServer);
+  registerTodoListTools(mcpServer);
 
   return mcpServer;
 }
