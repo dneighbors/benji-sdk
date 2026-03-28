@@ -44,14 +44,14 @@ development_status:
   epic-1-retrospective: optional
 
   # Epic 2: MCP Server — Existing SDK Resources (Phase 1)
-  epic-2: in-progress
+  epic-2: done
   2-1-scaffold-mcp-server-with-stdio-transport: done
   2-2-todo-tools: done
   2-3-tag-tools: done
   2-4-project-tools: done
   2-5-todo-list-tools: done
-  2-6-habit-tools: backlog
-  2-7-mood-tools: backlog
+  2-6-habit-tools: done
+  2-7-mood-tools: done
   epic-2-retrospective: optional
 
   # Epic 3: MCP Server — Existing SDK Resources (Phase 2)

@@ -4,6 +4,8 @@ import { registerTodoTools } from "./tools/todos.js";
 import { registerTagTools } from "./tools/tags.js";
 import { registerProjectTools } from "./tools/projects.js";
 import { registerTodoListTools } from "./tools/todo-lists.js";
+import { registerHabitTools } from "./tools/habits.js";
+import { registerMoodTools } from "./tools/mood.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -30,6 +32,8 @@ export function createServer(): McpServer {
   registerTagTools(mcpServer);
   registerProjectTools(mcpServer);
   registerTodoListTools(mcpServer);
+  registerHabitTools(mcpServer);
+  registerMoodTools(mcpServer);
 
   return mcpServer;
 }
