@@ -87,8 +87,8 @@ development_status:
   epic-6-retrospective: optional
 
   # Epic 7: Documentation & Polish
-  epic-7: backlog
-  7-1-readme-and-mcp-usage-docs: backlog
+  epic-7: in-progress
+  7-1-readme-and-mcp-usage-docs: done
   7-2-claude-md-and-config-snippets: backlog
   7-3-env-var-docs-and-troubleshooting: backlog
   epic-7-retrospective: optional
