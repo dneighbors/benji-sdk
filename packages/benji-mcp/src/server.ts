@@ -15,6 +15,10 @@ import { registerWeightLogTools } from "./tools/weight-logs.js";
 import { registerTodoViewTools } from "./tools/todo-views.js";
 import { registerProjectSectionTools } from "./tools/project-sections.js";
 import { registerTodoListSectionTools } from "./tools/todo-list-sections.js";
+import { registerGoalTools } from "./tools/goals.js";
+import { registerContactTools } from "./tools/contacts.js";
+import { registerFoodTools } from "./tools/food.js";
+import { registerBloodPressureTools } from "./tools/blood-pressure.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -52,6 +56,10 @@ export function createServer(): McpServer {
   registerTodoViewTools(mcpServer);
   registerProjectSectionTools(mcpServer);
   registerTodoListSectionTools(mcpServer);
+  registerGoalTools(mcpServer);
+  registerContactTools(mcpServer);
+  registerFoodTools(mcpServer);
+  registerBloodPressureTools(mcpServer);
 
   return mcpServer;
 }
