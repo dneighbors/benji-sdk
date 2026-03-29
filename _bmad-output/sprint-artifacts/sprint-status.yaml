@@ -74,8 +74,8 @@ development_status:
   epic-5: in-progress
   5-1-weight-log-tools: done
   5-2-todo-view-tools: done
-  5-3-project-section-tools: backlog
-  5-4-todo-list-section-tools: backlog
+  5-3-project-section-tools: done
+  5-4-todo-list-section-tools: done
   5-5-goals-contacts-food-blood-pressure-tools: backlog
   epic-5-retrospective: optional
 

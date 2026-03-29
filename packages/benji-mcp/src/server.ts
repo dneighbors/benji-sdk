@@ -13,6 +13,8 @@ import { registerJournalTools } from "./tools/journal.js";
 import { registerPainEventTools } from "./tools/pain-events.js";
 import { registerWeightLogTools } from "./tools/weight-logs.js";
 import { registerTodoViewTools } from "./tools/todo-views.js";
+import { registerProjectSectionTools } from "./tools/project-sections.js";
+import { registerTodoListSectionTools } from "./tools/todo-list-sections.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -48,6 +50,8 @@ export function createServer(): McpServer {
   registerPainEventTools(mcpServer);
   registerWeightLogTools(mcpServer);
   registerTodoViewTools(mcpServer);
+  registerProjectSectionTools(mcpServer);
+  registerTodoListSectionTools(mcpServer);
 
   return mcpServer;
 }
