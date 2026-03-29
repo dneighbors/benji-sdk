@@ -11,6 +11,7 @@ import { registerFastingTools } from "./tools/fasting.js";
 import { registerWorkoutTools } from "./tools/workouts.js";
 import { registerJournalTools } from "./tools/journal.js";
 import { registerPainEventTools } from "./tools/pain-events.js";
+import { registerWeightLogTools } from "./tools/weight-logs.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -44,6 +45,7 @@ export function createServer(): McpServer {
   registerWorkoutTools(mcpServer);
   registerJournalTools(mcpServer);
   registerPainEventTools(mcpServer);
+  registerWeightLogTools(mcpServer);
 
   return mcpServer;
 }
