@@ -10,9 +10,10 @@ export const ymdDateSchema = z.object({
 
 /** Timezone-aware date schema for create/update operations. */
 export const tzDateSchema = z.object({
-  timezone: z.string().describe("IANA timezone, e.g. America/New_York"),
+  timezone: z.string().min(1).describe("IANA timezone, e.g. America/New_York"),
   dateInUsersTimezone: z
     .string()
+    .regex(/^\d{4}-\d{2}-\d{2}/, "Must start with YYYY-MM-DD date format")
     .describe("ISO date string in user's timezone, e.g. 2026-03-28"),
 });
 
