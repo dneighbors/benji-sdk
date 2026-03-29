@@ -70,7 +70,7 @@ export function registerFoodCommand(program: Command): void {
         if (options.carbs !== undefined) body.carbs = parseNumber(options.carbs, "carbs");
         if (options.fat !== undefined) body.fat = parseNumber(options.fat, "fat");
         if (options.calories !== undefined) body.calories = parseNumber(options.calories, "calories");
-        if (options.onPath !== undefined) body.onPath = options.onPath;
+        if (command.getOptionValueSource("onPath") === "cli") body.onPath = options.onPath;
         if (options.date !== undefined) body.date = toTzDate(options.date);
 
         const result = await wrapSdkCall(
@@ -135,7 +135,7 @@ export function registerFoodCommand(program: Command): void {
         if (options.carbs !== undefined) data.carbs = parseNumber(options.carbs, "carbs");
         if (options.fat !== undefined) data.fat = parseNumber(options.fat, "fat");
         if (options.calories !== undefined) data.calories = parseNumber(options.calories, "calories");
-        if (options.onPath !== undefined) data.onPath = options.onPath;
+        if (command.getOptionValueSource("onPath") === "cli") data.onPath = options.onPath;
         if (options.date !== undefined) data.date = toTzDate(options.date);
 
         const result = await wrapSdkCall(

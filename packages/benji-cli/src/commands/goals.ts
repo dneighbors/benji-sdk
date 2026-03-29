@@ -103,8 +103,8 @@ export function registerGoalsCommand(program: Command): void {
         if (options.name !== undefined) data.name = options.name;
         if (options.dueDate !== undefined) data.dueDate = toTzDate(options.dueDate, "due-date");
         if (options.emoji !== undefined) data.emoji = options.emoji;
-        if (options.public !== undefined) data.public = options.public;
-        if (options.done !== undefined) data.done = options.done;
+        if (command.getOptionValueSource("public") === "cli") data.public = options.public;
+        if (command.getOptionValueSource("done") === "cli") data.done = options.done;
 
         const result = await wrapSdkCall(
           Goals.goalsUpdate({ path: { id }, body: { data } }),

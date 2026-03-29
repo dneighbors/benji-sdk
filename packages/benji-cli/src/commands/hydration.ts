@@ -53,7 +53,7 @@ export function registerHydrationCommand(program: Command): void {
         if (amount) body.amount = parseNumber(amount, "amount");
         if (options.name !== undefined) body.name = options.name;
         if (options.date !== undefined) body.date = toTzDate(options.date);
-        if (options.countsTowardGoal !== undefined) body.countsTowardGoal = options.countsTowardGoal;
+        if (command.getOptionValueSource("countsTowardGoal") === "cli") body.countsTowardGoal = options.countsTowardGoal;
         if (options.type !== undefined) body.type = options.type;
 
         const result = await wrapSdkCall(
@@ -87,7 +87,7 @@ export function registerHydrationCommand(program: Command): void {
         if (options.amount !== undefined) data.amount = parseNumber(options.amount, "amount");
         if (options.name !== undefined) data.name = options.name;
         if (options.date !== undefined) data.date = toTzDate(options.date);
-        if (options.countsTowardGoal !== undefined) data.countsTowardGoal = options.countsTowardGoal;
+        if (command.getOptionValueSource("countsTowardGoal") === "cli") data.countsTowardGoal = options.countsTowardGoal;
 
         const result = await wrapSdkCall(
           Hydration.hydrationLogsUpdate({ path: { id }, body: { data } }),

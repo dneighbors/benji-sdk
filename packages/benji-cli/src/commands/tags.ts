@@ -84,7 +84,7 @@ export function registerTagsCommand(program: Command): void {
         if (options.name !== undefined) data.name = options.name;
         if (options.points !== undefined) data.points = parseNumber(options.points, "points");
         if (options.emoji !== undefined) data.emoji = options.emoji;
-        if (options.paused !== undefined) data.paused = options.paused;
+        if (command.getOptionValueSource("paused") === "cli") data.paused = options.paused;
         if (options.tagGroupId !== undefined) data.tagGroupId = options.tagGroupId;
 
         const result = await wrapSdkCall(

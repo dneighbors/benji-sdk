@@ -111,7 +111,7 @@ export function registerContactsCommand(program: Command): void {
         if (options.birthday !== undefined) data.birthday = options.birthday;
         if (options.address !== undefined) data.address = options.address;
         if (options.avatarUrl !== undefined) data.avatarUrl = options.avatarUrl;
-        if (options.showInWeeksOfLife !== undefined) data.showInWeeksOfLife = options.showInWeeksOfLife;
+        if (command.getOptionValueSource("showInWeeksOfLife") === "cli") data.showInWeeksOfLife = options.showInWeeksOfLife;
         if (options.relationshipType !== undefined) data.relationshipType = options.relationshipType;
 
         const result = await wrapSdkCall(
