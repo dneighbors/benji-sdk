@@ -80,10 +80,10 @@ development_status:
   epic-5-retrospective: optional
 
   # Epic 6: CLI
-  epic-6: backlog
-  6-1-scaffold-cli-package: backlog
-  6-2-implement-core-commands: backlog
-  6-3-output-formatting: backlog
+  epic-6: in-progress
+  6-1-scaffold-cli-package: done
+  6-2-implement-core-commands: done
+  6-3-output-formatting: done
   epic-6-retrospective: optional
 
   # Epic 7: Documentation & Polish
