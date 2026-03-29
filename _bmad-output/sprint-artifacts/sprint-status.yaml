@@ -64,10 +64,10 @@ development_status:
   epic-3-retrospective: optional
 
   # Epic 4: SDK Update — New Alpha API Resources
-  epic-4: in-progress
+  epic-4: done
   4-1-update-openapi-spec-from-alpha: done
   4-2-regenerate-sdk-and-fix-build: done
-  4-3-verify-new-resource-classes: backlog
+  4-3-verify-new-resource-classes: done
   epic-4-retrospective: optional
 
   # Epic 5: MCP Server — Newly Added Resources
