@@ -1,25 +1,16 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { Hydration, wrapSdkCall } from "benji-sdk";
-import { toolResult, handleToolError } from "./util.js";
+import {
+  toolResult,
+  handleToolError,
+  ymdDateSchema,
+  tzDateSchema,
+} from "./util.js";
 
 // NOTE: Hydration (and other Epic 3 resources) uses path: { id } for
 // update/delete operations (RESTful URL params), unlike Epic 2 tools
 // (Tags, Mood, etc.) which use body: { id }.
-
-// Shared date schemas to avoid duplication across tools
-const ymdDateSchema = z.object({
-  year: z.number().int().min(1900).max(2100).describe("Year (e.g. 2026)"),
-  month: z.number().int().min(1).max(12).describe("Month (1-12)"),
-  day: z.number().int().min(1).max(31).describe("Day of month (1-31)"),
-});
-
-const tzDateSchema = z.object({
-  timezone: z.string().describe("IANA timezone, e.g. America/New_York"),
-  dateInUsersTimezone: z
-    .string()
-    .describe("ISO date string in user's timezone, e.g. 2026-03-28"),
-});
 
 /**
  * Register all 5 hydration MCP tools on the given server.
