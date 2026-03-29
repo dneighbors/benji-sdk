@@ -2,7 +2,7 @@
 
 import type { Client, Options as Options2, TDataShape } from './client/index.js';
 import { client } from './client.gen.js';
-import type { FastingDeleteData, FastingDeleteErrors, FastingDeleteResponses, FastingEndData, FastingEndErrors, FastingEndResponses, FastingGetActiveData, FastingGetActiveErrors, FastingGetActiveResponses, FastingGetDashboardInfoData, FastingGetDashboardInfoErrors, FastingGetDashboardInfoResponses, FastingGetData, FastingGetErrors, FastingGetResponses, FastingGetStatsData, FastingGetStatsErrors, FastingGetStatsResponses, FastingListData, FastingListErrors, FastingListResponses, FastingStartData, FastingStartErrors, FastingStartResponses, FastingUpdateData, FastingUpdateErrors, FastingUpdateResponses, HabitsCreateData, HabitsCreateErrors, HabitsCreateResponses, HabitsDeleteData, HabitsDeleteErrors, HabitsDeleteResponses, HabitsDuplicateData, HabitsDuplicateErrors, HabitsDuplicateResponses, HabitsGetData, HabitsGetErrors, HabitsGetHabitsAndCompletionsData, HabitsGetHabitsAndCompletionsErrors, HabitsGetHabitsAndCompletionsResponses, HabitsGetHabitScoreForWidgetData, HabitsGetHabitScoreForWidgetErrors, HabitsGetHabitScoreForWidgetResponses, HabitsGetHabitsForCurrentUserData, HabitsGetHabitsForCurrentUserErrors, HabitsGetHabitsForCurrentUserResponses, HabitsGetResponses, HabitsLogHabitOnDayData, HabitsLogHabitOnDayErrors, HabitsLogHabitOnDayResponses, HabitsLogManyHabitsOnDayData, HabitsLogManyHabitsOnDayErrors, HabitsLogManyHabitsOnDayResponses, HabitsUpdateData, HabitsUpdateErrors, HabitsUpdateResponses, HydrationLogsCreateData, HydrationLogsCreateErrors, HydrationLogsCreateResponses, HydrationLogsDeleteData, HydrationLogsDeleteErrors, HydrationLogsDeleteManyData, HydrationLogsDeleteManyErrors, HydrationLogsDeleteManyResponses, HydrationLogsDeleteResponses, HydrationLogsGetData, HydrationLogsGetErrors, HydrationLogsGetResponses, HydrationLogsGetStatsData, HydrationLogsGetStatsErrors, HydrationLogsGetStatsResponses, HydrationLogsListData, HydrationLogsListErrors, HydrationLogsListResponses, HydrationLogsUpdateData, HydrationLogsUpdateErrors, HydrationLogsUpdateResponses, JournalEntriesCreateData, JournalEntriesCreateErrors, JournalEntriesCreateResponses, JournalEntriesDecryptData, JournalEntriesDecryptErrors, JournalEntriesDecryptResponses, JournalEntriesDeleteData, JournalEntriesDeleteErrors, JournalEntriesDeleteManyData, JournalEntriesDeleteManyErrors, JournalEntriesDeleteManyResponses, JournalEntriesDeleteResponses, JournalEntriesEncryptData, JournalEntriesEncryptErrors, JournalEntriesEncryptManyData, JournalEntriesEncryptManyErrors, JournalEntriesEncryptManyResponses, JournalEntriesEncryptResponses, JournalEntriesGetData, JournalEntriesGetErrors, JournalEntriesGetForDecryptingData, JournalEntriesGetForDecryptingErrors, JournalEntriesGetForDecryptingResponses, JournalEntriesGetResponses, JournalEntriesListData, JournalEntriesListErrors, JournalEntriesListResponses, JournalEntriesStatsData, JournalEntriesStatsErrors, JournalEntriesStatsResponses, JournalEntriesToggleEncryptionData, JournalEntriesToggleEncryptionErrors, JournalEntriesToggleEncryptionResponses, JournalEntriesUpdateData, JournalEntriesUpdateErrors, JournalEntriesUpdateManyEncryptionData, JournalEntriesUpdateManyEncryptionErrors, JournalEntriesUpdateManyEncryptionResponses, JournalEntriesUpdateResponses, MoodCreateData, MoodCreateErrors, MoodCreateResponses, MoodDeleteAllData, MoodDeleteAllErrors, MoodDeleteAllResponses, MoodDeleteData, MoodDeleteErrors, MoodDeleteManyData, MoodDeleteManyErrors, MoodDeleteManyResponses, MoodDeleteResponses, MoodGetData, MoodGetErrors, MoodGetForWidgetData, MoodGetForWidgetErrors, MoodGetForWidgetResponses, MoodGetResponses, MoodListData, MoodListErrors, MoodListResponses, MoodUpdateData, MoodUpdateErrors, MoodUpdateResponses, PackingActivitiesCreateData, PackingActivitiesCreateErrors, PackingActivitiesCreateResponses, PackingActivitiesDeleteData, PackingActivitiesDeleteErrors, PackingActivitiesDeleteManyData, PackingActivitiesDeleteManyErrors, PackingActivitiesDeleteManyResponses, PackingActivitiesDeleteResponses, PackingActivitiesExistsData, PackingActivitiesExistsErrors, PackingActivitiesExistsResponses, PackingActivitiesGetData, PackingActivitiesGetErrors, PackingActivitiesGetResponses, PackingActivitiesListData, PackingActivitiesListErrors, PackingActivitiesListResponses, PackingActivitiesUpdateData, PackingActivitiesUpdateErrors, PackingActivitiesUpdateResponses, PackingItemsCreateData, PackingItemsCreateErrors, PackingItemsCreateResponses, PackingItemsDeleteData, PackingItemsDeleteErrors, PackingItemsDeleteManyData, PackingItemsDeleteManyErrors, PackingItemsDeleteManyResponses, PackingItemsDeleteResponses, PackingItemsGetData, PackingItemsGetErrors, PackingItemsGetResponses, PackingItemsListData, PackingItemsListErrors, PackingItemsListResponses, PackingItemsUpdateData, PackingItemsUpdateErrors, PackingItemsUpdateResponses, PainEventsBodyPartsData, PainEventsBodyPartsErrors, PainEventsBodyPartsResponses, PainEventsCreateData, PainEventsCreateErrors, PainEventsCreateResponses, PainEventsDeleteData, PainEventsDeleteErrors, PainEventsDeleteManyData, PainEventsDeleteManyErrors, PainEventsDeleteManyResponses, PainEventsDeleteResponses, PainEventsGetData, PainEventsGetErrors, PainEventsGetResponses, PainEventsListData, PainEventsListErrors, PainEventsListResponses, PainEventsRecentBodyPartsData, PainEventsRecentBodyPartsErrors, PainEventsRecentBodyPartsResponses, PainEventsUpdateData, PainEventsUpdateErrors, PainEventsUpdateResponses, ProjectsCreateData, ProjectsCreateErrors, ProjectsCreateResponses, ProjectsDeleteData, ProjectsDeleteErrors, ProjectsDeleteResponses, ProjectsExistsData, ProjectsExistsErrors, ProjectsExistsResponses, ProjectsForTodoFormData, ProjectsForTodoFormErrors, ProjectsForTodoFormResponses, ProjectsGetData, ProjectsGetErrors, ProjectsGetResponses, ProjectsListData, ProjectsListErrors, ProjectsListResponses, ProjectsUpdateData, ProjectsUpdateErrors, ProjectsUpdateResponses, StaysCreateData, StaysCreateErrors, StaysCreateResponses, StaysDeleteData, StaysDeleteErrors, StaysDeleteManyData, StaysDeleteManyErrors, StaysDeleteManyResponses, StaysDeleteResponses, StaysGetData, StaysGetErrors, StaysGetResponses, StaysListData, StaysListErrors, StaysListResponses, StaysUpdateData, StaysUpdateErrors, StaysUpdateResponses, TagsCreateData, TagsCreateErrors, TagsCreateResponses, TagsDeleteData, TagsDeleteErrors, TagsDeleteResponses, TagsExistsData, TagsExistsErrors, TagsExistsResponses, TagsFavoritesData, TagsFavoritesErrors, TagsFavoritesResponses, TagsForTodoFormData, TagsForTodoFormErrors, TagsForTodoFormResponses, TagsGetData, TagsGetErrors, TagsGetResponses, TagsListData, TagsListErrors, TagsListResponses, TagsUpdateData, TagsUpdateErrors, TagsUpdateResponses, TodoListsCreateData, TodoListsCreateErrors, TodoListsCreateResponses, TodoListsDeleteData, TodoListsDeleteErrors, TodoListsDeleteResponses, TodoListsExistsData, TodoListsExistsErrors, TodoListsExistsResponses, TodoListsFavoritesData, TodoListsFavoritesErrors, TodoListsFavoritesResponses, TodoListsForTodoFormData, TodoListsForTodoFormErrors, TodoListsForTodoFormResponses, TodoListsGetData, TodoListsGetErrors, TodoListsGetResponses, TodoListsListData, TodoListsListErrors, TodoListsListResponses, TodoListsUpdateData, TodoListsUpdateErrors, TodoListsUpdateResponses, TodosAssignableUsersData, TodosAssignableUsersErrors, TodosAssignableUsersResponses, TodosAssignData, TodosAssignErrors, TodosAssignResponses, TodosByListData, TodosByListErrors, TodosByListResponses, TodosByProjectData, TodosByProjectErrors, TodosByProjectResponses, TodosByTagData, TodosByTagErrors, TodosByTagResponses, TodosCreateData, TodosCreateErrors, TodosCreateResponses, TodosDeleteData, TodosDeleteErrors, TodosDeleteManyData, TodosDeleteManyErrors, TodosDeleteManyResponses, TodosDeleteResponses, TodosExistsData, TodosExistsErrors, TodosExistsResponses, TodosGetData, TodosGetErrors, TodosGetResponses, TodosListData, TodosListErrors, TodosListResponses, TodosPossibleAssigneesData, TodosPossibleAssigneesErrors, TodosPossibleAssigneesResponses, TodosQuickUpdateManyData, TodosQuickUpdateManyErrors, TodosQuickUpdateManyResponses, TodosToggleData, TodosToggleErrors, TodosToggleResponses, TodosUnassignData, TodosUnassignErrors, TodosUnassignResponses, TodosUpdateData, TodosUpdateErrors, TodosUpdateResponses, TransportsCreateData, TransportsCreateErrors, TransportsCreateResponses, TransportsDeleteData, TransportsDeleteErrors, TransportsDeleteManyData, TransportsDeleteManyErrors, TransportsDeleteManyResponses, TransportsDeleteResponses, TransportsExistsData, TransportsExistsErrors, TransportsExistsResponses, TransportsGetData, TransportsGetErrors, TransportsGetResponses, TransportsListData, TransportsListErrors, TransportsListResponses, TransportsUpdateData, TransportsUpdateErrors, TransportsUpdateResponses, TripsCreateData, TripsCreateErrors, TripsCreateResponses, TripsDeleteData, TripsDeleteErrors, TripsDeleteManyData, TripsDeleteManyErrors, TripsDeleteManyResponses, TripsDeleteResponses, TripsGetData, TripsGetErrors, TripsGetResponses, TripsListData, TripsListErrors, TripsListResponses, TripsUpdateData, TripsUpdateErrors, TripsUpdateResponses, WorkoutsActiveUsersData, WorkoutsActiveUsersErrors, WorkoutsActiveUsersResponses, WorkoutsCreateData, WorkoutsCreateErrors, WorkoutsCreateResponses, WorkoutsDeleteData, WorkoutsDeleteErrors, WorkoutsDeleteResponses, WorkoutsDuplicateData, WorkoutsDuplicateErrors, WorkoutsDuplicateResponses, WorkoutsEndData, WorkoutsEndErrors, WorkoutsEndResponses, WorkoutsGetData, WorkoutsGetErrors, WorkoutsGetResponses, WorkoutsGetWithDetailsData, WorkoutsGetWithDetailsErrors, WorkoutsGetWithDetailsResponses, WorkoutsInProgressData, WorkoutsInProgressErrors, WorkoutsInProgressResponses, WorkoutsListData, WorkoutsListErrors, WorkoutsListResponses, WorkoutsStartData, WorkoutsStartErrors, WorkoutsStartResponses, WorkoutsSubmitCompleteData, WorkoutsSubmitCompleteErrors, WorkoutsSubmitCompleteResponses, WorkoutsUpdateData, WorkoutsUpdateErrors, WorkoutsUpdateNameData, WorkoutsUpdateNameErrors, WorkoutsUpdateNameResponses, WorkoutsUpdateResponses } from './types.gen.js';
+import type { ActivitiesCreateData, ActivitiesCreateErrors, ActivitiesCreateResponses, ActivitiesDeleteData, ActivitiesDeleteErrors, ActivitiesDeleteResponses, ActivitiesGetData, ActivitiesGetErrors, ActivitiesGetResponses, ActivitiesListData, ActivitiesListErrors, ActivitiesListResponses, ActivitiesUpdateData, ActivitiesUpdateErrors, ActivitiesUpdateResponses, BloodPressureLogsCreateData, BloodPressureLogsCreateErrors, BloodPressureLogsCreateResponses, BloodPressureLogsDeleteData, BloodPressureLogsDeleteErrors, BloodPressureLogsDeleteManyData, BloodPressureLogsDeleteManyErrors, BloodPressureLogsDeleteManyResponses, BloodPressureLogsDeleteResponses, BloodPressureLogsGetData, BloodPressureLogsGetErrors, BloodPressureLogsGetResponses, BloodPressureLogsListData, BloodPressureLogsListErrors, BloodPressureLogsListResponses, BloodPressureLogsUpdateData, BloodPressureLogsUpdateErrors, BloodPressureLogsUpdateResponses, ContactsCreateData, ContactsCreateErrors, ContactsCreateResponses, ContactsDeleteData, ContactsDeleteErrors, ContactsDeleteManyData, ContactsDeleteManyErrors, ContactsDeleteManyResponses, ContactsDeleteResponses, ContactsGetData, ContactsGetErrors, ContactsGetResponses, ContactsListData, ContactsListErrors, ContactsListResponses, ContactsUpdateData, ContactsUpdateErrors, ContactsUpdateResponses, CountdownsCreateData, CountdownsCreateErrors, CountdownsCreateResponses, CountdownsDeleteData, CountdownsDeleteErrors, CountdownsDeleteResponses, CountdownsGetData, CountdownsGetErrors, CountdownsGetResponses, CountdownsListData, CountdownsListErrors, CountdownsListResponses, CountdownsUpdateData, CountdownsUpdateErrors, CountdownsUpdateResponses, DashboardsCreateData, DashboardsCreateErrors, DashboardsCreateResponses, DashboardsDeleteData, DashboardsDeleteErrors, DashboardsDeleteResponses, DashboardsGetData, DashboardsGetErrors, DashboardsGetResponses, DashboardsListData, DashboardsListErrors, DashboardsListResponses, DashboardsUpdateData, DashboardsUpdateErrors, DashboardsUpdateResponses, FastingDeleteData, FastingDeleteErrors, FastingDeleteResponses, FastingEndData, FastingEndErrors, FastingEndResponses, FastingGetActiveData, FastingGetActiveErrors, FastingGetActiveResponses, FastingGetDashboardInfoData, FastingGetDashboardInfoErrors, FastingGetDashboardInfoResponses, FastingGetData, FastingGetErrors, FastingGetResponses, FastingGetStatsData, FastingGetStatsErrors, FastingGetStatsResponses, FastingListData, FastingListErrors, FastingListResponses, FastingStartData, FastingStartErrors, FastingStartResponses, FastingUpdateData, FastingUpdateErrors, FastingUpdateResponses, FoodLogsCreateData, FoodLogsCreateErrors, FoodLogsCreateResponses, FoodLogsDeleteData, FoodLogsDeleteErrors, FoodLogsDeleteManyData, FoodLogsDeleteManyErrors, FoodLogsDeleteManyResponses, FoodLogsDeleteResponses, FoodLogsGetCaloriesStatsData, FoodLogsGetCaloriesStatsErrors, FoodLogsGetCaloriesStatsResponses, FoodLogsGetCarbsStatsData, FoodLogsGetCarbsStatsErrors, FoodLogsGetCarbsStatsResponses, FoodLogsGetData, FoodLogsGetErrors, FoodLogsGetProteinStatsData, FoodLogsGetProteinStatsErrors, FoodLogsGetProteinStatsResponses, FoodLogsGetResponses, FoodLogsListData, FoodLogsListErrors, FoodLogsListResponses, FoodLogsUpdateData, FoodLogsUpdateErrors, FoodLogsUpdateResponses, FoodTemplatesCreateData, FoodTemplatesCreateErrors, FoodTemplatesCreateResponses, FoodTemplatesDeleteData, FoodTemplatesDeleteErrors, FoodTemplatesDeleteManyData, FoodTemplatesDeleteManyErrors, FoodTemplatesDeleteManyResponses, FoodTemplatesDeleteResponses, FoodTemplatesGetData, FoodTemplatesGetErrors, FoodTemplatesGetResponses, FoodTemplatesListData, FoodTemplatesListErrors, FoodTemplatesListResponses, FoodTemplatesUpdateData, FoodTemplatesUpdateErrors, FoodTemplatesUpdateResponses, GoalsCreateData, GoalsCreateErrors, GoalsCreateResponses, GoalsDeleteData, GoalsDeleteErrors, GoalsDeleteManyData, GoalsDeleteManyErrors, GoalsDeleteManyResponses, GoalsDeleteResponses, GoalsGetData, GoalsGetErrors, GoalsGetResponses, GoalsListData, GoalsListErrors, GoalsListResponses, GoalsPublicListData, GoalsPublicListErrors, GoalsPublicListResponses, GoalsUpdateData, GoalsUpdateErrors, GoalsUpdateResponses, HabitsCreateData, HabitsCreateErrors, HabitsCreateResponses, HabitsDeleteData, HabitsDeleteErrors, HabitsDeleteResponses, HabitsDuplicateData, HabitsDuplicateErrors, HabitsDuplicateResponses, HabitsGetData, HabitsGetErrors, HabitsGetHabitsAndCompletionsData, HabitsGetHabitsAndCompletionsErrors, HabitsGetHabitsAndCompletionsResponses, HabitsGetHabitScoreForWidgetData, HabitsGetHabitScoreForWidgetErrors, HabitsGetHabitScoreForWidgetResponses, HabitsGetHabitsForCurrentUserData, HabitsGetHabitsForCurrentUserErrors, HabitsGetHabitsForCurrentUserResponses, HabitsGetResponses, HabitsLogHabitOnDayData, HabitsLogHabitOnDayErrors, HabitsLogHabitOnDayResponses, HabitsLogManyHabitsOnDayData, HabitsLogManyHabitsOnDayErrors, HabitsLogManyHabitsOnDayResponses, HabitsUpdateData, HabitsUpdateErrors, HabitsUpdateResponses, HomesCreateData, HomesCreateErrors, HomesCreateResponses, HomesDeleteData, HomesDeleteErrors, HomesDeleteResponses, HomesGetData, HomesGetErrors, HomesGetResponses, HomesListData, HomesListErrors, HomesListResponses, HomesUpdateData, HomesUpdateErrors, HomesUpdateResponses, HydrationGoalsCreateData, HydrationGoalsCreateErrors, HydrationGoalsCreateResponses, HydrationGoalsDeleteData, HydrationGoalsDeleteErrors, HydrationGoalsDeleteResponses, HydrationGoalsGetData, HydrationGoalsGetErrors, HydrationGoalsGetForDateData, HydrationGoalsGetForDateErrors, HydrationGoalsGetForDateResponses, HydrationGoalsGetResponses, HydrationGoalsListData, HydrationGoalsListErrors, HydrationGoalsListResponses, HydrationGoalsUpdateData, HydrationGoalsUpdateErrors, HydrationGoalsUpdateResponses, HydrationLogsCreateData, HydrationLogsCreateErrors, HydrationLogsCreateResponses, HydrationLogsDeleteData, HydrationLogsDeleteErrors, HydrationLogsDeleteManyData, HydrationLogsDeleteManyErrors, HydrationLogsDeleteManyResponses, HydrationLogsDeleteResponses, HydrationLogsGetData, HydrationLogsGetErrors, HydrationLogsGetResponses, HydrationLogsGetStatsData, HydrationLogsGetStatsErrors, HydrationLogsGetStatsResponses, HydrationLogsListData, HydrationLogsListErrors, HydrationLogsListResponses, HydrationLogsUpdateData, HydrationLogsUpdateErrors, HydrationLogsUpdateResponses, HydrationTemplatesCreateData, HydrationTemplatesCreateErrors, HydrationTemplatesCreateResponses, HydrationTemplatesDeleteData, HydrationTemplatesDeleteErrors, HydrationTemplatesDeleteManyData, HydrationTemplatesDeleteManyErrors, HydrationTemplatesDeleteManyResponses, HydrationTemplatesDeleteResponses, HydrationTemplatesGetData, HydrationTemplatesGetErrors, HydrationTemplatesGetResponses, HydrationTemplatesListData, HydrationTemplatesListErrors, HydrationTemplatesListResponses, HydrationTemplatesUpdateData, HydrationTemplatesUpdateErrors, HydrationTemplatesUpdateResponses, IngredientListsCreateData, IngredientListsCreateErrors, IngredientListsCreateResponses, IngredientListsDeleteData, IngredientListsDeleteErrors, IngredientListsDeleteManyData, IngredientListsDeleteManyErrors, IngredientListsDeleteManyResponses, IngredientListsDeleteResponses, IngredientListsGetData, IngredientListsGetErrors, IngredientListsGetResponses, IngredientListsListData, IngredientListsListErrors, IngredientListsListResponses, IngredientListsUpdateData, IngredientListsUpdateErrors, IngredientListsUpdateResponses, IngredientsAddToShoppingListData, IngredientsAddToShoppingListErrors, IngredientsAddToShoppingListResponses, IngredientsCreateData, IngredientsCreateErrors, IngredientsCreateResponses, IngredientsDeleteData, IngredientsDeleteErrors, IngredientsDeleteManyData, IngredientsDeleteManyErrors, IngredientsDeleteManyResponses, IngredientsDeleteResponses, IngredientsGetData, IngredientsGetErrors, IngredientsGetResponses, IngredientsListData, IngredientsListErrors, IngredientsListOrphansData, IngredientsListOrphansErrors, IngredientsListOrphansResponses, IngredientsListResponses, IngredientsUpdateData, IngredientsUpdateErrors, IngredientsUpdateManyData, IngredientsUpdateManyErrors, IngredientsUpdateManyResponses, IngredientsUpdateResponses, JournalEntriesCreateData, JournalEntriesCreateErrors, JournalEntriesCreateResponses, JournalEntriesDecryptData, JournalEntriesDecryptErrors, JournalEntriesDecryptResponses, JournalEntriesDeleteData, JournalEntriesDeleteErrors, JournalEntriesDeleteManyData, JournalEntriesDeleteManyErrors, JournalEntriesDeleteManyResponses, JournalEntriesDeleteResponses, JournalEntriesEncryptData, JournalEntriesEncryptErrors, JournalEntriesEncryptManyData, JournalEntriesEncryptManyErrors, JournalEntriesEncryptManyResponses, JournalEntriesEncryptResponses, JournalEntriesGetData, JournalEntriesGetErrors, JournalEntriesGetForDecryptingData, JournalEntriesGetForDecryptingErrors, JournalEntriesGetForDecryptingResponses, JournalEntriesGetResponses, JournalEntriesListData, JournalEntriesListErrors, JournalEntriesListResponses, JournalEntriesStatsData, JournalEntriesStatsErrors, JournalEntriesStatsResponses, JournalEntriesToggleEncryptionData, JournalEntriesToggleEncryptionErrors, JournalEntriesToggleEncryptionResponses, JournalEntriesUpdateData, JournalEntriesUpdateErrors, JournalEntriesUpdateManyEncryptionData, JournalEntriesUpdateManyEncryptionErrors, JournalEntriesUpdateManyEncryptionResponses, JournalEntriesUpdateResponses, LocationsCreateData, LocationsCreateErrors, LocationsCreateResponses, LocationsDeleteData, LocationsDeleteErrors, LocationsDeleteResponses, LocationsGetData, LocationsGetErrors, LocationsGetResponses, LocationsListData, LocationsListErrors, LocationsListResponses, LocationsUpdateData, LocationsUpdateErrors, LocationsUpdateResponses, MacroGoalsCreateData, MacroGoalsCreateErrors, MacroGoalsCreateResponses, MacroGoalsDeleteData, MacroGoalsDeleteErrors, MacroGoalsDeleteResponses, MacroGoalsGetData, MacroGoalsGetErrors, MacroGoalsGetForDateData, MacroGoalsGetForDateErrors, MacroGoalsGetForDateResponses, MacroGoalsGetResponses, MacroGoalsListData, MacroGoalsListErrors, MacroGoalsListResponses, MacroGoalsUpdateData, MacroGoalsUpdateErrors, MacroGoalsUpdateResponses, MealPlansCreateData, MealPlansCreateErrors, MealPlansCreateResponses, MealPlansDeleteData, MealPlansDeleteErrors, MealPlansDeleteManyData, MealPlansDeleteManyErrors, MealPlansDeleteManyResponses, MealPlansDeleteResponses, MealPlansGetData, MealPlansGetErrors, MealPlansGetResponses, MealPlansListData, MealPlansListErrors, MealPlansListResponses, MealPlansUpdateData, MealPlansUpdateErrors, MealPlansUpdateResponses, MoodCreateData, MoodCreateErrors, MoodCreateResponses, MoodDeleteAllData, MoodDeleteAllErrors, MoodDeleteAllResponses, MoodDeleteData, MoodDeleteErrors, MoodDeleteManyData, MoodDeleteManyErrors, MoodDeleteManyResponses, MoodDeleteResponses, MoodGetData, MoodGetErrors, MoodGetForWidgetData, MoodGetForWidgetErrors, MoodGetForWidgetResponses, MoodGetResponses, MoodListData, MoodListErrors, MoodListResponses, MoodUpdateData, MoodUpdateErrors, MoodUpdateResponses, PackingActivitiesCreateData, PackingActivitiesCreateErrors, PackingActivitiesCreateResponses, PackingActivitiesDeleteData, PackingActivitiesDeleteErrors, PackingActivitiesDeleteManyData, PackingActivitiesDeleteManyErrors, PackingActivitiesDeleteManyResponses, PackingActivitiesDeleteResponses, PackingActivitiesExistsData, PackingActivitiesExistsErrors, PackingActivitiesExistsResponses, PackingActivitiesGetData, PackingActivitiesGetErrors, PackingActivitiesGetResponses, PackingActivitiesListData, PackingActivitiesListErrors, PackingActivitiesListResponses, PackingActivitiesUpdateData, PackingActivitiesUpdateErrors, PackingActivitiesUpdateResponses, PackingItemsCreateData, PackingItemsCreateErrors, PackingItemsCreateResponses, PackingItemsDeleteData, PackingItemsDeleteErrors, PackingItemsDeleteManyData, PackingItemsDeleteManyErrors, PackingItemsDeleteManyResponses, PackingItemsDeleteResponses, PackingItemsGetData, PackingItemsGetErrors, PackingItemsGetResponses, PackingItemsListData, PackingItemsListErrors, PackingItemsListResponses, PackingItemsUpdateData, PackingItemsUpdateErrors, PackingItemsUpdateResponses, PainEventsBodyPartsData, PainEventsBodyPartsErrors, PainEventsBodyPartsResponses, PainEventsCreateData, PainEventsCreateErrors, PainEventsCreateResponses, PainEventsDeleteData, PainEventsDeleteErrors, PainEventsDeleteManyData, PainEventsDeleteManyErrors, PainEventsDeleteManyResponses, PainEventsDeleteResponses, PainEventsGetData, PainEventsGetErrors, PainEventsGetResponses, PainEventsListData, PainEventsListErrors, PainEventsListResponses, PainEventsRecentBodyPartsData, PainEventsRecentBodyPartsErrors, PainEventsRecentBodyPartsResponses, PainEventsUpdateData, PainEventsUpdateErrors, PainEventsUpdateResponses, PlannerEventListsCreateData, PlannerEventListsCreateErrors, PlannerEventListsCreateResponses, PlannerEventListsDeleteData, PlannerEventListsDeleteErrors, PlannerEventListsDeleteResponses, PlannerEventListsGetData, PlannerEventListsGetErrors, PlannerEventListsGetResponses, PlannerEventListsHasSharedListsData, PlannerEventListsHasSharedListsErrors, PlannerEventListsHasSharedListsResponses, PlannerEventListsListData, PlannerEventListsListErrors, PlannerEventListsListResponses, PlannerEventListsUpdateData, PlannerEventListsUpdateErrors, PlannerEventListsUpdateResponses, PlannerEventsCreateData, PlannerEventsCreateErrors, PlannerEventsCreateResponses, PlannerEventsDeleteData, PlannerEventsDeleteErrors, PlannerEventsDeleteManyData, PlannerEventsDeleteManyErrors, PlannerEventsDeleteManyResponses, PlannerEventsDeleteResponses, PlannerEventsGetData, PlannerEventsGetErrors, PlannerEventsGetResponses, PlannerEventsListData, PlannerEventsListErrors, PlannerEventsListResponses, PlannerEventsUpdateData, PlannerEventsUpdateErrors, PlannerEventsUpdateResponses, ProblemsCreateData, ProblemsCreateErrors, ProblemsCreateLogData, ProblemsCreateLogErrors, ProblemsCreateLogResponses, ProblemsCreateResponses, ProblemsDeleteData, ProblemsDeleteErrors, ProblemsDeleteManyData, ProblemsDeleteManyErrors, ProblemsDeleteManyResponses, ProblemsDeleteResponses, ProblemsGetData, ProblemsGetErrors, ProblemsGetResponses, ProblemsListData, ProblemsListErrors, ProblemsListLogsData, ProblemsListLogsErrors, ProblemsListLogsResponses, ProblemsListResponses, ProblemsUpdateData, ProblemsUpdateErrors, ProblemsUpdateResponses, ProjectsCreateData, ProjectsCreateErrors, ProjectsCreateResponses, ProjectsDeleteData, ProjectsDeleteErrors, ProjectsDeleteResponses, ProjectSectionsDeleteData, ProjectSectionsDeleteErrors, ProjectSectionsDeleteResponses, ProjectSectionsUpdateData, ProjectSectionsUpdateErrors, ProjectSectionsUpdateResponses, ProjectsExistsData, ProjectsExistsErrors, ProjectsExistsResponses, ProjectsForTodoFormData, ProjectsForTodoFormErrors, ProjectsForTodoFormResponses, ProjectsGetData, ProjectsGetErrors, ProjectsGetResponses, ProjectsListData, ProjectsListErrors, ProjectsListResponses, ProjectsUpdateData, ProjectsUpdateErrors, ProjectsUpdateResponses, StaysCreateData, StaysCreateErrors, StaysCreateResponses, StaysDeleteData, StaysDeleteErrors, StaysDeleteManyData, StaysDeleteManyErrors, StaysDeleteManyResponses, StaysDeleteResponses, StaysGetData, StaysGetErrors, StaysGetResponses, StaysListData, StaysListErrors, StaysListResponses, StaysUpdateData, StaysUpdateErrors, StaysUpdateResponses, TagsCreateData, TagsCreateErrors, TagsCreateResponses, TagsDeleteData, TagsDeleteErrors, TagsDeleteResponses, TagsExistsData, TagsExistsErrors, TagsExistsResponses, TagsFavoritesData, TagsFavoritesErrors, TagsFavoritesResponses, TagsForTodoFormData, TagsForTodoFormErrors, TagsForTodoFormResponses, TagsGetData, TagsGetErrors, TagsGetResponses, TagsListData, TagsListErrors, TagsListResponses, TagsUpdateData, TagsUpdateErrors, TagsUpdateResponses, TodoListsCreateData, TodoListsCreateErrors, TodoListsCreateResponses, TodoListsDeleteData, TodoListsDeleteErrors, TodoListsDeleteResponses, TodoListSectionsDeleteData, TodoListSectionsDeleteErrors, TodoListSectionsDeleteResponses, TodoListSectionsUpdateData, TodoListSectionsUpdateErrors, TodoListSectionsUpdateResponses, TodoListsExistsData, TodoListsExistsErrors, TodoListsExistsResponses, TodoListsFavoritesData, TodoListsFavoritesErrors, TodoListsFavoritesResponses, TodoListsForTodoFormData, TodoListsForTodoFormErrors, TodoListsForTodoFormResponses, TodoListsGetData, TodoListsGetErrors, TodoListsGetResponses, TodoListsListData, TodoListsListErrors, TodoListsListResponses, TodoListsUpdateData, TodoListsUpdateErrors, TodoListsUpdateResponses, TodosAssignableUsersData, TodosAssignableUsersErrors, TodosAssignableUsersResponses, TodosAssignData, TodosAssignErrors, TodosAssignResponses, TodosByListData, TodosByListErrors, TodosByListResponses, TodosByProjectData, TodosByProjectErrors, TodosByProjectResponses, TodosByTagData, TodosByTagErrors, TodosByTagResponses, TodosCreateData, TodosCreateErrors, TodosCreateResponses, TodosDeleteData, TodosDeleteErrors, TodosDeleteManyData, TodosDeleteManyErrors, TodosDeleteManyResponses, TodosDeleteResponses, TodosExistsData, TodosExistsErrors, TodosExistsResponses, TodosGetData, TodosGetErrors, TodosGetResponses, TodosListData, TodosListErrors, TodosListResponses, TodosPossibleAssigneesData, TodosPossibleAssigneesErrors, TodosPossibleAssigneesResponses, TodosQuickUpdateManyData, TodosQuickUpdateManyErrors, TodosQuickUpdateManyResponses, TodosToggleData, TodosToggleErrors, TodosToggleResponses, TodosUnassignData, TodosUnassignErrors, TodosUnassignResponses, TodosUpdateData, TodosUpdateErrors, TodosUpdateResponses, TodoViewsDoneData, TodoViewsDoneErrors, TodoViewsDoneResponses, TodoViewsPausedData, TodoViewsPausedErrors, TodoViewsPausedResponses, TodoViewsRecurringData, TodoViewsRecurringErrors, TodoViewsRecurringResponses, TodoViewsSharingData, TodoViewsSharingErrors, TodoViewsSharingResponses, TodoViewsTrashData, TodoViewsTrashErrors, TodoViewsTrashResponses, TransportsCreateData, TransportsCreateErrors, TransportsCreateResponses, TransportsDeleteData, TransportsDeleteErrors, TransportsDeleteManyData, TransportsDeleteManyErrors, TransportsDeleteManyResponses, TransportsDeleteResponses, TransportsExistsData, TransportsExistsErrors, TransportsExistsResponses, TransportsGetData, TransportsGetErrors, TransportsGetResponses, TransportsListData, TransportsListErrors, TransportsListResponses, TransportsUpdateData, TransportsUpdateErrors, TransportsUpdateResponses, TripsCreateData, TripsCreateErrors, TripsCreateResponses, TripsDeleteData, TripsDeleteErrors, TripsDeleteManyData, TripsDeleteManyErrors, TripsDeleteManyResponses, TripsDeleteResponses, TripsGetData, TripsGetErrors, TripsGetResponses, TripsListData, TripsListErrors, TripsListResponses, TripsUpdateData, TripsUpdateErrors, TripsUpdateResponses, WeightGoalsCreateData, WeightGoalsCreateErrors, WeightGoalsCreateResponses, WeightGoalsDeleteData, WeightGoalsDeleteErrors, WeightGoalsDeleteManyData, WeightGoalsDeleteManyErrors, WeightGoalsDeleteManyResponses, WeightGoalsDeleteResponses, WeightGoalsGetData, WeightGoalsGetErrors, WeightGoalsGetForDateData, WeightGoalsGetForDateErrors, WeightGoalsGetForDateResponses, WeightGoalsGetResponses, WeightGoalsListData, WeightGoalsListErrors, WeightGoalsListResponses, WeightGoalsUpdateData, WeightGoalsUpdateErrors, WeightGoalsUpdateResponses, WeightLogsCreateData, WeightLogsCreateErrors, WeightLogsCreateResponses, WeightLogsDeleteData, WeightLogsDeleteErrors, WeightLogsDeleteManyData, WeightLogsDeleteManyErrors, WeightLogsDeleteManyResponses, WeightLogsDeleteResponses, WeightLogsGetCurrentActiveGoalData, WeightLogsGetCurrentActiveGoalErrors, WeightLogsGetCurrentActiveGoalResponses, WeightLogsGetData, WeightLogsGetErrors, WeightLogsGetResponses, WeightLogsGetSettingsData, WeightLogsGetSettingsErrors, WeightLogsGetSettingsResponses, WeightLogsGetWeightsForWidgetData, WeightLogsGetWeightsForWidgetErrors, WeightLogsGetWeightsForWidgetResponses, WeightLogsListData, WeightLogsListErrors, WeightLogsListResponses, WeightLogsUpdateData, WeightLogsUpdateErrors, WeightLogsUpdateResponses, WeightLogsUpdateWeightUnitData, WeightLogsUpdateWeightUnitErrors, WeightLogsUpdateWeightUnitResponses, WorkoutsActiveUsersData, WorkoutsActiveUsersErrors, WorkoutsActiveUsersResponses, WorkoutsCreateData, WorkoutsCreateErrors, WorkoutsCreateResponses, WorkoutsDeleteData, WorkoutsDeleteErrors, WorkoutsDeleteResponses, WorkoutsDuplicateData, WorkoutsDuplicateErrors, WorkoutsDuplicateResponses, WorkoutsEndData, WorkoutsEndErrors, WorkoutsEndResponses, WorkoutsGetData, WorkoutsGetErrors, WorkoutsGetResponses, WorkoutsGetWithDetailsData, WorkoutsGetWithDetailsErrors, WorkoutsGetWithDetailsResponses, WorkoutsInProgressData, WorkoutsInProgressErrors, WorkoutsInProgressResponses, WorkoutsListData, WorkoutsListErrors, WorkoutsListResponses, WorkoutsStartData, WorkoutsStartErrors, WorkoutsStartResponses, WorkoutsSubmitCompleteData, WorkoutsSubmitCompleteErrors, WorkoutsSubmitCompleteResponses, WorkoutsUpdateData, WorkoutsUpdateErrors, WorkoutsUpdateNameData, WorkoutsUpdateNameErrors, WorkoutsUpdateNameResponses, WorkoutsUpdateResponses } from './types.gen.js';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean> = Options2<TData, ThrowOnError> & {
     /**
@@ -823,6 +823,110 @@ export class Stays {
         return (options.client ?? client).post<StaysDeleteManyResponses, StaysDeleteManyErrors, ThrowOnError>({
             security: [{ name: 'x-api-key', type: 'apiKey' }],
             url: '/stays/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class PlannerEvents {
+    /**
+     * Get planner event
+     *
+     * Get a single planner event by ID
+     */
+    public static plannerEventsGet<ThrowOnError extends boolean = false>(options: Options<PlannerEventsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventsGetResponses, PlannerEventsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List planner events
+     *
+     * List planner events for the current user
+     */
+    public static plannerEventsList<ThrowOnError extends boolean = false>(options?: Options<PlannerEventsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<PlannerEventsListResponses, PlannerEventsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Create planner event
+     *
+     * Create a new planner event
+     */
+    public static plannerEventsCreate<ThrowOnError extends boolean = false>(options: Options<PlannerEventsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventsCreateResponses, PlannerEventsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update planner event
+     *
+     * Update an existing planner event
+     */
+    public static plannerEventsUpdate<ThrowOnError extends boolean = false>(options: Options<PlannerEventsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventsUpdateResponses, PlannerEventsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete planner event
+     *
+     * Delete a planner event
+     */
+    public static plannerEventsDelete<ThrowOnError extends boolean = false>(options: Options<PlannerEventsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventsDeleteResponses, PlannerEventsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events/delete',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete multiple planner events
+     *
+     * Delete multiple planner events
+     */
+    public static plannerEventsDeleteMany<ThrowOnError extends boolean = false>(options: Options<PlannerEventsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventsDeleteManyResponses, PlannerEventsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-events/delete-many',
             ...options,
             headers: {
                 'Content-Type': 'application/json',
@@ -1840,6 +1944,96 @@ export class Hydration {
             }
         });
     }
+    
+    /**
+     * Delete hydration goal
+     *
+     * Delete a hydration goal by ID.
+     */
+    public static hydrationGoalsDelete<ThrowOnError extends boolean = false>(options: Options<HydrationGoalsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<HydrationGoalsDeleteResponses, HydrationGoalsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update hydration goal
+     *
+     * Update an existing hydration goal.
+     */
+    public static hydrationGoalsUpdate<ThrowOnError extends boolean = false>(options: Options<HydrationGoalsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<HydrationGoalsUpdateResponses, HydrationGoalsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get hydration goal
+     *
+     * Get a single hydration goal by ID.
+     */
+    public static hydrationGoalsGet<ThrowOnError extends boolean = false>(options: Options<HydrationGoalsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationGoalsGetResponses, HydrationGoalsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List hydration goals
+     *
+     * List hydration goals for the current user.
+     */
+    public static hydrationGoalsList<ThrowOnError extends boolean = false>(options?: Options<HydrationGoalsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<HydrationGoalsListResponses, HydrationGoalsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Get hydration goal for date
+     *
+     * Get the active hydration goal for a date.
+     */
+    public static hydrationGoalsGetForDate<ThrowOnError extends boolean = false>(options: Options<HydrationGoalsGetForDateData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationGoalsGetForDateResponses, HydrationGoalsGetForDateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals/for-date',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create hydration goal
+     *
+     * Create a new hydration goal for the current user.
+     */
+    public static hydrationGoalsCreate<ThrowOnError extends boolean = false>(options: Options<HydrationGoalsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationGoalsCreateResponses, HydrationGoalsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration/goals',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
 }
 
 export class Fasting {
@@ -1973,6 +2167,313 @@ export class Fasting {
                 'Content-Type': 'application/json',
                 ...options.headers
             }
+        });
+    }
+}
+
+export class Food {
+    /**
+     * Delete food log
+     *
+     * Delete a food log by ID.
+     */
+    public static foodLogsDelete<ThrowOnError extends boolean = false>(options: Options<FoodLogsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<FoodLogsDeleteResponses, FoodLogsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update food log
+     *
+     * Update an existing food log.
+     */
+    public static foodLogsUpdate<ThrowOnError extends boolean = false>(options: Options<FoodLogsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<FoodLogsUpdateResponses, FoodLogsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get food log
+     *
+     * Get a single food log by ID.
+     */
+    public static foodLogsGet<ThrowOnError extends boolean = false>(options: Options<FoodLogsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsGetResponses, FoodLogsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List food logs
+     *
+     * List food logs for a date range.
+     */
+    public static foodLogsList<ThrowOnError extends boolean = false>(options: Options<FoodLogsListData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsListResponses, FoodLogsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create food log
+     *
+     * Create a new food log.
+     */
+    public static foodLogsCreate<ThrowOnError extends boolean = false>(options: Options<FoodLogsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsCreateResponses, FoodLogsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete multiple food logs
+     *
+     * Delete multiple food logs by ID.
+     */
+    public static foodLogsDeleteMany<ThrowOnError extends boolean = false>(options: Options<FoodLogsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsDeleteManyResponses, FoodLogsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/logs/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get food calories stats
+     *
+     * Get total calories and calorie goal stats for a date.
+     */
+    public static foodLogsGetCaloriesStats<ThrowOnError extends boolean = false>(options: Options<FoodLogsGetCaloriesStatsData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsGetCaloriesStatsResponses, FoodLogsGetCaloriesStatsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/stats/calories',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get food protein stats
+     *
+     * Get total protein and protein goal stats for a date.
+     */
+    public static foodLogsGetProteinStats<ThrowOnError extends boolean = false>(options: Options<FoodLogsGetProteinStatsData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsGetProteinStatsResponses, FoodLogsGetProteinStatsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/stats/protein',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get food carbs stats
+     *
+     * Get total carbs and carbs goal stats for a date.
+     */
+    public static foodLogsGetCarbsStats<ThrowOnError extends boolean = false>(options: Options<FoodLogsGetCarbsStatsData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodLogsGetCarbsStatsResponses, FoodLogsGetCarbsStatsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food/stats/carbs',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class WeightLogs {
+    /**
+     * Get weight log
+     *
+     * Get a single weight log by ID.
+     */
+    public static weightLogsGet<ThrowOnError extends boolean = false>(options: Options<WeightLogsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsGetResponses, WeightLogsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List weight logs
+     *
+     * Get weight logs for the user, optionally filtered by date range.
+     */
+    public static weightLogsList<ThrowOnError extends boolean = false>(options?: Options<WeightLogsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<WeightLogsListResponses, WeightLogsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Create weight log
+     *
+     * Create a new weight log entry.
+     */
+    public static weightLogsCreate<ThrowOnError extends boolean = false>(options: Options<WeightLogsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsCreateResponses, WeightLogsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/create',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update weight log
+     *
+     * Update an existing weight log.
+     */
+    public static weightLogsUpdate<ThrowOnError extends boolean = false>(options: Options<WeightLogsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsUpdateResponses, WeightLogsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete weight log
+     *
+     * Delete a weight log by ID.
+     */
+    public static weightLogsDelete<ThrowOnError extends boolean = false>(options: Options<WeightLogsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsDeleteResponses, WeightLogsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/delete',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete many weight logs
+     *
+     * Delete multiple weight log entries.
+     */
+    public static weightLogsDeleteMany<ThrowOnError extends boolean = false>(options: Options<WeightLogsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsDeleteManyResponses, WeightLogsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get weight settings
+     *
+     * Get user weight unit preferences.
+     */
+    public static weightLogsGetSettings<ThrowOnError extends boolean = false>(options?: Options<WeightLogsGetSettingsData, ThrowOnError>) {
+        return (options?.client ?? client).post<WeightLogsGetSettingsResponses, WeightLogsGetSettingsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/settings/get',
+            ...options
+        });
+    }
+    
+    /**
+     * Update weight settings
+     *
+     * Update user weight unit preference.
+     */
+    public static weightLogsUpdateWeightUnit<ThrowOnError extends boolean = false>(options: Options<WeightLogsUpdateWeightUnitData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightLogsUpdateWeightUnitResponses, WeightLogsUpdateWeightUnitErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/settings/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get weights for widget
+     *
+     * Get recent weight data points for widget charts.
+     */
+    public static weightLogsGetWeightsForWidget<ThrowOnError extends boolean = false>(options?: Options<WeightLogsGetWeightsForWidgetData, ThrowOnError>) {
+        return (options?.client ?? client).post<WeightLogsGetWeightsForWidgetResponses, WeightLogsGetWeightsForWidgetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/widget',
+            ...options
+        });
+    }
+    
+    /**
+     * Get current weight goal
+     *
+     * Get the active weight goal with start and current weight context.
+     */
+    public static weightLogsGetCurrentActiveGoal<ThrowOnError extends boolean = false>(options?: Options<WeightLogsGetCurrentActiveGoalData, ThrowOnError>) {
+        return (options?.client ?? client).post<WeightLogsGetCurrentActiveGoalResponses, WeightLogsGetCurrentActiveGoalErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight-logs/current-goal',
+            ...options
         });
     }
 }
@@ -2178,6 +2679,40 @@ export class Workouts {
 
 export class Journal {
     /**
+     * List journal entries
+     *
+     * List journal entries for a date range
+     */
+    public static journalEntriesList<ThrowOnError extends boolean = false>(options: Options<JournalEntriesListData, ThrowOnError>) {
+        return (options.client ?? client).post<JournalEntriesListResponses, JournalEntriesListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/journal/entries/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get journal stats
+     *
+     * Get statistics for journal entries
+     */
+    public static journalEntriesStats<ThrowOnError extends boolean = false>(options: Options<JournalEntriesStatsData, ThrowOnError>) {
+        return (options.client ?? client).post<JournalEntriesStatsResponses, JournalEntriesStatsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/journal/stats',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
      * Delete journal entry
      *
      * Delete a journal entry
@@ -2225,14 +2760,14 @@ export class Journal {
     }
     
     /**
-     * List journal entries
+     * Get entry for decrypting
      *
-     * List journal entries for a date range
+     * Get entry for decrypting without persisting changes
      */
-    public static journalEntriesList<ThrowOnError extends boolean = false>(options: Options<JournalEntriesListData, ThrowOnError>) {
-        return (options.client ?? client).post<JournalEntriesListResponses, JournalEntriesListErrors, ThrowOnError>({
+    public static journalEntriesGetForDecrypting<ThrowOnError extends boolean = false>(options: Options<JournalEntriesGetForDecryptingData, ThrowOnError>) {
+        return (options.client ?? client).post<JournalEntriesGetForDecryptingResponses, JournalEntriesGetForDecryptingErrors, ThrowOnError>({
             security: [{ name: 'x-api-key', type: 'apiKey' }],
-            url: '/journal/entries/list',
+            url: '/journal/entries/{id}/decrypt-preview',
             ...options,
             headers: {
                 'Content-Type': 'application/json',
@@ -2267,40 +2802,6 @@ export class Journal {
         return (options.client ?? client).post<JournalEntriesDeleteManyResponses, JournalEntriesDeleteManyErrors, ThrowOnError>({
             security: [{ name: 'x-api-key', type: 'apiKey' }],
             url: '/journal/entries/delete-many',
-            ...options,
-            headers: {
-                'Content-Type': 'application/json',
-                ...options.headers
-            }
-        });
-    }
-    
-    /**
-     * Get journal stats
-     *
-     * Get statistics for journal entries
-     */
-    public static journalEntriesStats<ThrowOnError extends boolean = false>(options: Options<JournalEntriesStatsData, ThrowOnError>) {
-        return (options.client ?? client).post<JournalEntriesStatsResponses, JournalEntriesStatsErrors, ThrowOnError>({
-            security: [{ name: 'x-api-key', type: 'apiKey' }],
-            url: '/journal/stats',
-            ...options,
-            headers: {
-                'Content-Type': 'application/json',
-                ...options.headers
-            }
-        });
-    }
-    
-    /**
-     * Get entry for decrypting
-     *
-     * Get entry for decrypting without persisting changes
-     */
-    public static journalEntriesGetForDecrypting<ThrowOnError extends boolean = false>(options: Options<JournalEntriesGetForDecryptingData, ThrowOnError>) {
-        return (options.client ?? client).post<JournalEntriesGetForDecryptingResponses, JournalEntriesGetForDecryptingErrors, ThrowOnError>({
-            security: [{ name: 'x-api-key', type: 'apiKey' }],
-            url: '/journal/entries/{id}/decrypt-preview',
             ...options,
             headers: {
                 'Content-Type': 'application/json',
@@ -2387,6 +2888,1787 @@ export class Journal {
             security: [{ name: 'x-api-key', type: 'apiKey' }],
             url: '/journal/entries/{id}/toggle-encryption',
             ...options
+        });
+    }
+}
+
+export class PlannerEventLists {
+    /**
+     * List planner event lists
+     *
+     * List planner event lists for the current user
+     */
+    public static plannerEventListsList<ThrowOnError extends boolean = false>(options?: Options<PlannerEventListsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<PlannerEventListsListResponses, PlannerEventListsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Check if user has shared planner event lists
+     *
+     * Returns whether the current user has planner event lists shared with them
+     */
+    public static plannerEventListsHasSharedLists<ThrowOnError extends boolean = false>(options?: Options<PlannerEventListsHasSharedListsData, ThrowOnError>) {
+        return (options?.client ?? client).post<PlannerEventListsHasSharedListsResponses, PlannerEventListsHasSharedListsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists/has-shared-lists',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete planner event list
+     *
+     * Delete a planner event list
+     */
+    public static plannerEventListsDelete<ThrowOnError extends boolean = false>(options: Options<PlannerEventListsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<PlannerEventListsDeleteResponses, PlannerEventListsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update planner event list
+     *
+     * Update an existing planner event list
+     */
+    public static plannerEventListsUpdate<ThrowOnError extends boolean = false>(options: Options<PlannerEventListsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<PlannerEventListsUpdateResponses, PlannerEventListsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get planner event list
+     *
+     * Get a single planner event list by ID
+     */
+    public static plannerEventListsGet<ThrowOnError extends boolean = false>(options: Options<PlannerEventListsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventListsGetResponses, PlannerEventListsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Create planner event list
+     *
+     * Create a new planner event list
+     */
+    public static plannerEventListsCreate<ThrowOnError extends boolean = false>(options: Options<PlannerEventListsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<PlannerEventListsCreateResponses, PlannerEventListsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/planner-event-lists',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class TodoViews {
+    /**
+     * List completed todos
+     *
+     * List completed todos for the current user.
+     */
+    public static todoViewsDone<ThrowOnError extends boolean = false>(options?: Options<TodoViewsDoneData, ThrowOnError>) {
+        return (options?.client ?? client).post<TodoViewsDoneResponses, TodoViewsDoneErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-views/done',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * List trashed todos
+     *
+     * List deleted todos for the current user.
+     */
+    public static todoViewsTrash<ThrowOnError extends boolean = false>(options?: Options<TodoViewsTrashData, ThrowOnError>) {
+        return (options?.client ?? client).post<TodoViewsTrashResponses, TodoViewsTrashErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-views/trash',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * List paused todos
+     *
+     * List paused todos for the current user.
+     */
+    public static todoViewsPaused<ThrowOnError extends boolean = false>(options?: Options<TodoViewsPausedData, ThrowOnError>) {
+        return (options?.client ?? client).post<TodoViewsPausedResponses, TodoViewsPausedErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-views/paused',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * List recurring todos
+     *
+     * List recurring todos for the current user.
+     */
+    public static todoViewsRecurring<ThrowOnError extends boolean = false>(options?: Options<TodoViewsRecurringData, ThrowOnError>) {
+        return (options?.client ?? client).post<TodoViewsRecurringResponses, TodoViewsRecurringErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-views/recurring',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Get todo list sharing info
+     *
+     * Get sharing details for a todo list visible to the current user.
+     */
+    public static todoViewsSharing<ThrowOnError extends boolean = false>(options: Options<TodoViewsSharingData, ThrowOnError>) {
+        return (options.client ?? client).post<TodoViewsSharingResponses, TodoViewsSharingErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-views/sharing',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class ProjectSections {
+    /**
+     * Delete project section
+     *
+     * Delete a project section and optionally its todos.
+     */
+    public static projectSectionsDelete<ThrowOnError extends boolean = false>(options: Options<ProjectSectionsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<ProjectSectionsDeleteResponses, ProjectSectionsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/project-sections/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update project section
+     *
+     * Update a project section visible to the current user.
+     */
+    public static projectSectionsUpdate<ThrowOnError extends boolean = false>(options: Options<ProjectSectionsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<ProjectSectionsUpdateResponses, ProjectSectionsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/project-sections/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class TodoListSections {
+    /**
+     * Delete todo list section
+     *
+     * Delete a todo list section and optionally its todos.
+     */
+    public static todoListSectionsDelete<ThrowOnError extends boolean = false>(options: Options<TodoListSectionsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<TodoListSectionsDeleteResponses, TodoListSectionsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-list-sections/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update todo list section
+     *
+     * Update a todo list section visible to the current user.
+     */
+    public static todoListSectionsUpdate<ThrowOnError extends boolean = false>(options: Options<TodoListSectionsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<TodoListSectionsUpdateResponses, TodoListSectionsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/todo-list-sections/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Countdowns {
+    /**
+     * List countdowns
+     *
+     * List countdowns for the current user
+     */
+    public static countdownsList<ThrowOnError extends boolean = false>(options?: Options<CountdownsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<CountdownsListResponses, CountdownsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/countdowns/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete countdown
+     *
+     * Delete a countdown
+     */
+    public static countdownsDelete<ThrowOnError extends boolean = false>(options: Options<CountdownsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<CountdownsDeleteResponses, CountdownsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/countdowns/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update countdown
+     *
+     * Update an existing countdown
+     */
+    public static countdownsUpdate<ThrowOnError extends boolean = false>(options: Options<CountdownsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<CountdownsUpdateResponses, CountdownsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/countdowns/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get countdown
+     *
+     * Get a single countdown by ID
+     */
+    public static countdownsGet<ThrowOnError extends boolean = false>(options: Options<CountdownsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<CountdownsGetResponses, CountdownsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/countdowns/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Create countdown
+     *
+     * Create a new countdown
+     */
+    public static countdownsCreate<ThrowOnError extends boolean = false>(options: Options<CountdownsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<CountdownsCreateResponses, CountdownsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/countdowns',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Locations {
+    /**
+     * Delete location
+     *
+     * Delete a location by ID.
+     */
+    public static locationsDelete<ThrowOnError extends boolean = false>(options: Options<LocationsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<LocationsDeleteResponses, LocationsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/locations/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update location
+     *
+     * Update an existing location.
+     */
+    public static locationsUpdate<ThrowOnError extends boolean = false>(options: Options<LocationsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<LocationsUpdateResponses, LocationsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/locations/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get location
+     *
+     * Get a single location by ID.
+     */
+    public static locationsGet<ThrowOnError extends boolean = false>(options: Options<LocationsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<LocationsGetResponses, LocationsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/locations/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List locations
+     *
+     * List locations for the current user.
+     */
+    public static locationsList<ThrowOnError extends boolean = false>(options?: Options<LocationsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<LocationsListResponses, LocationsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/locations/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Create location
+     *
+     * Create a new location.
+     */
+    public static locationsCreate<ThrowOnError extends boolean = false>(options: Options<LocationsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<LocationsCreateResponses, LocationsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/locations',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Goals {
+    /**
+     * Delete goal
+     *
+     * Delete a goal.
+     */
+    public static goalsDelete<ThrowOnError extends boolean = false>(options: Options<GoalsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<GoalsDeleteResponses, GoalsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update goal
+     *
+     * Update an existing goal.
+     */
+    public static goalsUpdate<ThrowOnError extends boolean = false>(options: Options<GoalsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<GoalsUpdateResponses, GoalsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get goal
+     *
+     * Fetch a goal by id.
+     */
+    public static goalsGet<ThrowOnError extends boolean = false>(options: Options<GoalsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<GoalsGetResponses, GoalsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List goals
+     *
+     * List all goals for the current user.
+     */
+    public static goalsList<ThrowOnError extends boolean = false>(options?: Options<GoalsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<GoalsListResponses, GoalsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/list',
+            ...options
+        });
+    }
+    
+    /**
+     * List public goals
+     *
+     * List public goals for a user by username.
+     */
+    public static goalsPublicList<ThrowOnError extends boolean = false>(options: Options<GoalsPublicListData, ThrowOnError>) {
+        return (options.client ?? client).post<GoalsPublicListResponses, GoalsPublicListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/public/{username}',
+            ...options
+        });
+    }
+    
+    /**
+     * Create goal
+     *
+     * Create a new goal.
+     */
+    public static goalsCreate<ThrowOnError extends boolean = false>(options: Options<GoalsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<GoalsCreateResponses, GoalsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete many goals
+     *
+     * Delete multiple goals by ids.
+     */
+    public static goalsDeleteMany<ThrowOnError extends boolean = false>(options: Options<GoalsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<GoalsDeleteManyResponses, GoalsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/goals/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class BloodPressureLogs {
+    /**
+     * List blood pressure logs
+     *
+     * Get blood pressure logs for the current user, optionally filtered by date range.
+     */
+    public static bloodPressureLogsList<ThrowOnError extends boolean = false>(options?: Options<BloodPressureLogsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<BloodPressureLogsListResponses, BloodPressureLogsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Get blood pressure log
+     *
+     * Get a single blood pressure log by ID.
+     */
+    public static bloodPressureLogsGet<ThrowOnError extends boolean = false>(options: Options<BloodPressureLogsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<BloodPressureLogsGetResponses, BloodPressureLogsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create blood pressure log
+     *
+     * Create a new blood pressure log entry.
+     */
+    public static bloodPressureLogsCreate<ThrowOnError extends boolean = false>(options: Options<BloodPressureLogsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<BloodPressureLogsCreateResponses, BloodPressureLogsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/create',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update blood pressure log
+     *
+     * Update an existing blood pressure log.
+     */
+    public static bloodPressureLogsUpdate<ThrowOnError extends boolean = false>(options: Options<BloodPressureLogsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).post<BloodPressureLogsUpdateResponses, BloodPressureLogsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete blood pressure log
+     *
+     * Delete a blood pressure log by ID.
+     */
+    public static bloodPressureLogsDelete<ThrowOnError extends boolean = false>(options: Options<BloodPressureLogsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).post<BloodPressureLogsDeleteResponses, BloodPressureLogsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/delete',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete multiple blood pressure logs
+     *
+     * Delete blood pressure logs in bulk.
+     */
+    public static bloodPressureLogsDeleteMany<ThrowOnError extends boolean = false>(options: Options<BloodPressureLogsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<BloodPressureLogsDeleteManyResponses, BloodPressureLogsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/blood-pressure-logs/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class HydrationTemplates {
+    /**
+     * Get hydration template
+     *
+     * Get a single hydration template by ID.
+     */
+    public static hydrationTemplatesGet<ThrowOnError extends boolean = false>(options: Options<HydrationTemplatesGetData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationTemplatesGetResponses, HydrationTemplatesGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List hydration templates
+     *
+     * List hydration templates for the current user.
+     */
+    public static hydrationTemplatesList<ThrowOnError extends boolean = false>(options?: Options<HydrationTemplatesListData, ThrowOnError>) {
+        return (options?.client ?? client).post<HydrationTemplatesListResponses, HydrationTemplatesListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Create hydration template
+     *
+     * Create a new hydration template.
+     */
+    public static hydrationTemplatesCreate<ThrowOnError extends boolean = false>(options: Options<HydrationTemplatesCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationTemplatesCreateResponses, HydrationTemplatesCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update hydration template
+     *
+     * Update an existing hydration template.
+     */
+    public static hydrationTemplatesUpdate<ThrowOnError extends boolean = false>(options: Options<HydrationTemplatesUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<HydrationTemplatesUpdateResponses, HydrationTemplatesUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete hydration template
+     *
+     * Delete a hydration template.
+     */
+    public static hydrationTemplatesDelete<ThrowOnError extends boolean = false>(options: Options<HydrationTemplatesDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<HydrationTemplatesDeleteResponses, HydrationTemplatesDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates/delete',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete multiple hydration templates
+     *
+     * Delete multiple hydration templates.
+     */
+    public static hydrationTemplatesDeleteMany<ThrowOnError extends boolean = false>(options: Options<HydrationTemplatesDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<HydrationTemplatesDeleteManyResponses, HydrationTemplatesDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/hydration-templates/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class FoodTemplates {
+    /**
+     * Get food template
+     *
+     * Get a single food template by ID.
+     */
+    public static foodTemplatesGet<ThrowOnError extends boolean = false>(options: Options<FoodTemplatesGetData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodTemplatesGetResponses, FoodTemplatesGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List food templates
+     *
+     * List food templates for the current user.
+     */
+    public static foodTemplatesList<ThrowOnError extends boolean = false>(options?: Options<FoodTemplatesListData, ThrowOnError>) {
+        return (options?.client ?? client).post<FoodTemplatesListResponses, FoodTemplatesListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Create food template
+     *
+     * Create a new food template.
+     */
+    public static foodTemplatesCreate<ThrowOnError extends boolean = false>(options: Options<FoodTemplatesCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodTemplatesCreateResponses, FoodTemplatesCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update food template
+     *
+     * Update an existing food template.
+     */
+    public static foodTemplatesUpdate<ThrowOnError extends boolean = false>(options: Options<FoodTemplatesUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<FoodTemplatesUpdateResponses, FoodTemplatesUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete food template
+     *
+     * Delete a food template.
+     */
+    public static foodTemplatesDelete<ThrowOnError extends boolean = false>(options: Options<FoodTemplatesDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<FoodTemplatesDeleteResponses, FoodTemplatesDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates/delete',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete multiple food templates
+     *
+     * Delete multiple food templates.
+     */
+    public static foodTemplatesDeleteMany<ThrowOnError extends boolean = false>(options: Options<FoodTemplatesDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<FoodTemplatesDeleteManyResponses, FoodTemplatesDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/food-templates/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class IngredientLists {
+    /**
+     * List ingredient lists
+     *
+     * List ingredient lists visible to the current user.
+     */
+    public static ingredientListsList<ThrowOnError extends boolean = false>(options?: Options<IngredientListsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<IngredientListsListResponses, IngredientListsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete ingredient list
+     *
+     * Delete a single ingredient list.
+     */
+    public static ingredientListsDelete<ThrowOnError extends boolean = false>(options: Options<IngredientListsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<IngredientListsDeleteResponses, IngredientListsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update ingredient list
+     *
+     * Update an existing ingredient list.
+     */
+    public static ingredientListsUpdate<ThrowOnError extends boolean = false>(options: Options<IngredientListsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<IngredientListsUpdateResponses, IngredientListsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get ingredient list
+     *
+     * Get a single ingredient list by ID.
+     */
+    public static ingredientListsGet<ThrowOnError extends boolean = false>(options: Options<IngredientListsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientListsGetResponses, IngredientListsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Create ingredient list
+     *
+     * Create a new ingredient list.
+     */
+    public static ingredientListsCreate<ThrowOnError extends boolean = false>(options: Options<IngredientListsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientListsCreateResponses, IngredientListsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete many ingredient lists
+     *
+     * Delete multiple ingredient lists visible to the current user.
+     */
+    public static ingredientListsDeleteMany<ThrowOnError extends boolean = false>(options: Options<IngredientListsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientListsDeleteManyResponses, IngredientListsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredient-lists/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class MealPlans {
+    /**
+     * Delete meal plan
+     *
+     * Delete a meal plan
+     */
+    public static mealPlansDelete<ThrowOnError extends boolean = false>(options: Options<MealPlansDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<MealPlansDeleteResponses, MealPlansDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update meal plan
+     *
+     * Update an existing meal plan
+     */
+    public static mealPlansUpdate<ThrowOnError extends boolean = false>(options: Options<MealPlansUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<MealPlansUpdateResponses, MealPlansUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get meal plan
+     *
+     * Get a single meal plan by ID
+     */
+    public static mealPlansGet<ThrowOnError extends boolean = false>(options: Options<MealPlansGetData, ThrowOnError>) {
+        return (options.client ?? client).post<MealPlansGetResponses, MealPlansGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List meal plans
+     *
+     * List meal plans for current user
+     */
+    public static mealPlansList<ThrowOnError extends boolean = false>(options?: Options<MealPlansListData, ThrowOnError>) {
+        return (options?.client ?? client).post<MealPlansListResponses, MealPlansListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Create meal plan
+     *
+     * Create a new meal plan
+     */
+    public static mealPlansCreate<ThrowOnError extends boolean = false>(options: Options<MealPlansCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<MealPlansCreateResponses, MealPlansCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete many meal plans
+     *
+     * Delete multiple meal plans
+     */
+    public static mealPlansDeleteMany<ThrowOnError extends boolean = false>(options: Options<MealPlansDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<MealPlansDeleteManyResponses, MealPlansDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/meal-plans/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Contacts {
+    /**
+     * List contact relationships
+     *
+     * List all contact relationships for the current user, ordered by activity.
+     */
+    public static contactsList<ThrowOnError extends boolean = false>(options?: Options<ContactsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<ContactsListResponses, ContactsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Get a contact relationship
+     *
+     * Get a single contact relationship by id for the current user.
+     */
+    public static contactsGet<ThrowOnError extends boolean = false>(options: Options<ContactsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<ContactsGetResponses, ContactsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create a contact relationship
+     *
+     * Create a new contact (or update an existing one) and relationship entry.
+     */
+    public static contactsCreate<ThrowOnError extends boolean = false>(options: Options<ContactsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<ContactsCreateResponses, ContactsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/create',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update a contact relationship
+     *
+     * Update relationship metadata and contact fields.
+     */
+    public static contactsUpdate<ThrowOnError extends boolean = false>(options: Options<ContactsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).post<ContactsUpdateResponses, ContactsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete a contact relationship
+     *
+     * Delete a single user contact relationship.
+     */
+    public static contactsDelete<ThrowOnError extends boolean = false>(options: Options<ContactsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).post<ContactsDeleteResponses, ContactsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/delete',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete multiple contact relationships
+     *
+     * Delete multiple user contact relationships.
+     */
+    public static contactsDeleteMany<ThrowOnError extends boolean = false>(options: Options<ContactsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<ContactsDeleteManyResponses, ContactsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/contacts/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class WeightGoals {
+    /**
+     * Delete weight goal
+     *
+     * Delete a weight goal by ID.
+     */
+    public static weightGoalsDelete<ThrowOnError extends boolean = false>(options: Options<WeightGoalsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<WeightGoalsDeleteResponses, WeightGoalsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update weight goal
+     *
+     * Update an existing weight goal.
+     */
+    public static weightGoalsUpdate<ThrowOnError extends boolean = false>(options: Options<WeightGoalsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<WeightGoalsUpdateResponses, WeightGoalsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get weight goal
+     *
+     * Get a single weight goal by ID.
+     */
+    public static weightGoalsGet<ThrowOnError extends boolean = false>(options: Options<WeightGoalsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightGoalsGetResponses, WeightGoalsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List weight goals
+     *
+     * List weight goals for the current user.
+     */
+    public static weightGoalsList<ThrowOnError extends boolean = false>(options?: Options<WeightGoalsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<WeightGoalsListResponses, WeightGoalsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Create weight goal
+     *
+     * Create a new weight goal.
+     */
+    public static weightGoalsCreate<ThrowOnError extends boolean = false>(options: Options<WeightGoalsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightGoalsCreateResponses, WeightGoalsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete multiple weight goals
+     *
+     * Delete multiple weight goals by ID.
+     */
+    public static weightGoalsDeleteMany<ThrowOnError extends boolean = false>(options: Options<WeightGoalsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightGoalsDeleteManyResponses, WeightGoalsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get weight goal for date
+     *
+     * Get the active weight goal for a date.
+     */
+    public static weightGoalsGetForDate<ThrowOnError extends boolean = false>(options: Options<WeightGoalsGetForDateData, ThrowOnError>) {
+        return (options.client ?? client).post<WeightGoalsGetForDateResponses, WeightGoalsGetForDateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/weight/goals/for-date',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Problems {
+    /**
+     * List problems
+     *
+     * List all problems for the current user.
+     */
+    public static problemsList<ThrowOnError extends boolean = false>(options?: Options<ProblemsListData, ThrowOnError>) {
+        return (options?.client ?? client).get<ProblemsListResponses, ProblemsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems',
+            ...options
+        });
+    }
+    
+    /**
+     * Create problem
+     *
+     * Create a new problem.
+     */
+    public static problemsCreate<ThrowOnError extends boolean = false>(options: Options<ProblemsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<ProblemsCreateResponses, ProblemsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete problem
+     *
+     * Delete a problem and all related logs.
+     */
+    public static problemsDelete<ThrowOnError extends boolean = false>(options: Options<ProblemsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<ProblemsDeleteResponses, ProblemsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Get problem
+     *
+     * Fetch a problem by id.
+     */
+    public static problemsGet<ThrowOnError extends boolean = false>(options: Options<ProblemsGetData, ThrowOnError>) {
+        return (options.client ?? client).get<ProblemsGetResponses, ProblemsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update problem
+     *
+     * Update an existing problem.
+     */
+    public static problemsUpdate<ThrowOnError extends boolean = false>(options: Options<ProblemsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<ProblemsUpdateResponses, ProblemsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete many problems
+     *
+     * Delete multiple problems.
+     */
+    public static problemsDeleteMany<ThrowOnError extends boolean = false>(options: Options<ProblemsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<ProblemsDeleteManyResponses, ProblemsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List problem logs
+     *
+     * List logs for a problem.
+     */
+    public static problemsListLogs<ThrowOnError extends boolean = false>(options: Options<ProblemsListLogsData, ThrowOnError>) {
+        return (options.client ?? client).get<ProblemsListLogsResponses, ProblemsListLogsErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/{problemId}/logs',
+            ...options
+        });
+    }
+    
+    /**
+     * Create problem log
+     *
+     * Create a new problem log entry.
+     */
+    public static problemsCreateLog<ThrowOnError extends boolean = false>(options: Options<ProblemsCreateLogData, ThrowOnError>) {
+        return (options.client ?? client).post<ProblemsCreateLogResponses, ProblemsCreateLogErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/problems/{problemId}/logs',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Activities {
+    /**
+     * Get activity
+     *
+     * Get a single activity by ID.
+     */
+    public static activitiesGet<ThrowOnError extends boolean = false>(options: Options<ActivitiesGetData, ThrowOnError>) {
+        return (options.client ?? client).post<ActivitiesGetResponses, ActivitiesGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/activities/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List activities
+     *
+     * List activities for the current user.
+     */
+    public static activitiesList<ThrowOnError extends boolean = false>(options?: Options<ActivitiesListData, ThrowOnError>) {
+        return (options?.client ?? client).post<ActivitiesListResponses, ActivitiesListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/activities/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Create activity
+     *
+     * Create a new activity.
+     */
+    public static activitiesCreate<ThrowOnError extends boolean = false>(options: Options<ActivitiesCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<ActivitiesCreateResponses, ActivitiesCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/activities',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update activity
+     *
+     * Update an existing activity.
+     */
+    public static activitiesUpdate<ThrowOnError extends boolean = false>(options: Options<ActivitiesUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<ActivitiesUpdateResponses, ActivitiesUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/activities/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete activity
+     *
+     * Delete an activity.
+     */
+    public static activitiesDelete<ThrowOnError extends boolean = false>(options: Options<ActivitiesDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<ActivitiesDeleteResponses, ActivitiesDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/activities/delete',
+            ...options
+        });
+    }
+}
+
+export class MacroGoals {
+    /**
+     * Delete macro goal
+     *
+     * Delete a macro goal by ID.
+     */
+    public static macroGoalsDelete<ThrowOnError extends boolean = false>(options: Options<MacroGoalsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<MacroGoalsDeleteResponses, MacroGoalsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update macro goal
+     *
+     * Update an existing macro goal.
+     */
+    public static macroGoalsUpdate<ThrowOnError extends boolean = false>(options: Options<MacroGoalsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<MacroGoalsUpdateResponses, MacroGoalsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get macro goal
+     *
+     * Get a single macro goal by ID.
+     */
+    public static macroGoalsGet<ThrowOnError extends boolean = false>(options: Options<MacroGoalsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<MacroGoalsGetResponses, MacroGoalsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * List macro goals
+     *
+     * List macro goals for the current user.
+     */
+    public static macroGoalsList<ThrowOnError extends boolean = false>(options?: Options<MacroGoalsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<MacroGoalsListResponses, MacroGoalsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Get macro goal for date
+     *
+     * Get the macro goal active for a date.
+     */
+    public static macroGoalsGetForDate<ThrowOnError extends boolean = false>(options: Options<MacroGoalsGetForDateData, ThrowOnError>) {
+        return (options.client ?? client).post<MacroGoalsGetForDateResponses, MacroGoalsGetForDateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals/for-date',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create macro goal
+     *
+     * Create a new macro goal for the current user.
+     */
+    public static macroGoalsCreate<ThrowOnError extends boolean = false>(options: Options<MacroGoalsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<MacroGoalsCreateResponses, MacroGoalsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/macro/goals',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Homes {
+    /**
+     * List homes
+     *
+     * List homes shared with or owned by the current user.
+     */
+    public static homesList<ThrowOnError extends boolean = false>(options?: Options<HomesListData, ThrowOnError>) {
+        return (options?.client ?? client).get<HomesListResponses, HomesListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/homes',
+            ...options
+        });
+    }
+    
+    /**
+     * Create home
+     *
+     * Create a home for the current user.
+     */
+    public static homesCreate<ThrowOnError extends boolean = false>(options: Options<HomesCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<HomesCreateResponses, HomesCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/homes',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete home
+     *
+     * Delete a home and its dependent rooms, floors, chores, members and invites.
+     */
+    public static homesDelete<ThrowOnError extends boolean = false>(options: Options<HomesDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<HomesDeleteResponses, HomesDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/homes/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Get home
+     *
+     * Fetch a single home with nested room and chore data.
+     */
+    public static homesGet<ThrowOnError extends boolean = false>(options: Options<HomesGetData, ThrowOnError>) {
+        return (options.client ?? client).get<HomesGetResponses, HomesGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/homes/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update home
+     *
+     * Update home data if user has edit permission.
+     */
+    public static homesUpdate<ThrowOnError extends boolean = false>(options: Options<HomesUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<HomesUpdateResponses, HomesUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/homes/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Ingredients {
+    /**
+     * List ingredients
+     *
+     * List ingredients visible to the current user.
+     */
+    public static ingredientsList<ThrowOnError extends boolean = false>(options?: Options<IngredientsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<IngredientsListResponses, IngredientsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options?.headers
+            }
+        });
+    }
+    
+    /**
+     * Get ingredient
+     *
+     * Get a single ingredient by ID.
+     */
+    public static ingredientsGet<ThrowOnError extends boolean = false>(options: Options<IngredientsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientsGetResponses, IngredientsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/get',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Create ingredient
+     *
+     * Create a new ingredient.
+     */
+    public static ingredientsCreate<ThrowOnError extends boolean = false>(options: Options<IngredientsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientsCreateResponses, IngredientsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Update ingredient
+     *
+     * Update an existing ingredient.
+     */
+    public static ingredientsUpdate<ThrowOnError extends boolean = false>(options: Options<IngredientsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<IngredientsUpdateResponses, IngredientsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/update',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete ingredient
+     *
+     * Delete a single ingredient.
+     */
+    public static ingredientsDelete<ThrowOnError extends boolean = false>(options: Options<IngredientsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<IngredientsDeleteResponses, IngredientsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/delete',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete many ingredients
+     *
+     * Delete multiple ingredients.
+     */
+    public static ingredientsDeleteMany<ThrowOnError extends boolean = false>(options: Options<IngredientsDeleteManyData, ThrowOnError>) {
+        return (options.client ?? client).post<IngredientsDeleteManyResponses, IngredientsDeleteManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/delete-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * List orphan ingredients
+     *
+     * List ingredients not assigned to any ingredient list.
+     */
+    public static ingredientsListOrphans<ThrowOnError extends boolean = false>(options?: Options<IngredientsListOrphansData, ThrowOnError>) {
+        return (options?.client ?? client).post<IngredientsListOrphansResponses, IngredientsListOrphansErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/orphans',
+            ...options
+        });
+    }
+    
+    /**
+     * Update many ingredients
+     *
+     * Update multiple ingredients.
+     */
+    public static ingredientsUpdateMany<ThrowOnError extends boolean = false>(options: Options<IngredientsUpdateManyData, ThrowOnError>) {
+        return (options.client ?? client).patch<IngredientsUpdateManyResponses, IngredientsUpdateManyErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/update-many',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Mark ingredients to buy
+     *
+     * Mark selected ingredients as 'to buy'.
+     */
+    public static ingredientsAddToShoppingList<ThrowOnError extends boolean = false>(options: Options<IngredientsAddToShoppingListData, ThrowOnError>) {
+        return (options.client ?? client).patch<IngredientsAddToShoppingListResponses, IngredientsAddToShoppingListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/ingredients/add-to-shopping-list',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class Dashboards {
+    /**
+     * List dashboards
+     *
+     * List dashboards for the current user.
+     */
+    public static dashboardsList<ThrowOnError extends boolean = false>(options?: Options<DashboardsListData, ThrowOnError>) {
+        return (options?.client ?? client).post<DashboardsListResponses, DashboardsListErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/dashboards/list',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete dashboard
+     *
+     * Delete a dashboard by ID.
+     */
+    public static dashboardsDelete<ThrowOnError extends boolean = false>(options: Options<DashboardsDeleteData, ThrowOnError>) {
+        return (options.client ?? client).delete<DashboardsDeleteResponses, DashboardsDeleteErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/dashboards/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update dashboard
+     *
+     * Update an existing dashboard.
+     */
+    public static dashboardsUpdate<ThrowOnError extends boolean = false>(options: Options<DashboardsUpdateData, ThrowOnError>) {
+        return (options.client ?? client).patch<DashboardsUpdateResponses, DashboardsUpdateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/dashboards/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Get dashboard
+     *
+     * Get a single dashboard by ID.
+     */
+    public static dashboardsGet<ThrowOnError extends boolean = false>(options: Options<DashboardsGetData, ThrowOnError>) {
+        return (options.client ?? client).post<DashboardsGetResponses, DashboardsGetErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/dashboards/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Create dashboard
+     *
+     * Create a new dashboard.
+     */
+    public static dashboardsCreate<ThrowOnError extends boolean = false>(options: Options<DashboardsCreateData, ThrowOnError>) {
+        return (options.client ?? client).post<DashboardsCreateResponses, DashboardsCreateErrors, ThrowOnError>({
+            security: [{ name: 'x-api-key', type: 'apiKey' }],
+            url: '/dashboards',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
         });
     }
 }
