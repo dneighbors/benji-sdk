@@ -56,22 +56,6 @@ export function requireForce(
   }
 }
 
-/**
- * Merge stdin data with explicit CLI options. Explicit opts override stdin values.
- */
-export function mergeStdinOpts(
-  stdinData: Record<string, unknown>,
-  explicitOpts: Record<string, unknown>
-): Record<string, unknown> {
-  const merged = { ...stdinData };
-  for (const [key, value] of Object.entries(explicitOpts)) {
-    if (value !== undefined) {
-      merged[key] = value;
-    }
-  }
-  return merged;
-}
-
 /** Split comma-separated string into trimmed array. */
 export function parseCommaSeparated(value: string): string[] {
   return value.split(",").map((s) => s.trim()).filter(Boolean);
