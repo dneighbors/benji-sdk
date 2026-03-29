@@ -83,7 +83,7 @@ development_status:
   epic-6: in-progress
   6-1-scaffold-cli-package: done
   6-2-implement-core-commands: done
-  6-3-output-formatting: backlog
+  6-3-output-formatting: done
   epic-6-retrospective: optional
 
   # Epic 7: Documentation & Polish

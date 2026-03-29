@@ -20,7 +20,7 @@ export function registerTodosCommand(program: Command): void {
     .option("--task-type <type>", "Filter by task type (personal, work, both)")
     .option("--only-mandatory", "Show only mandatory todos")
     .option("--time-of-day <time>", "Filter by time of day (Any, Auto, Morning, Afternoon, Evening, Night)")
-    .addHelpText("after", `\nExamples:\n  $ benji todos list\n  $ benji todos list --screen today\n  $ benji todos list --search "groceries" --json\n  $ benji todos list --show-completed --task-type personal\n  $ benji todos list --only-mandatory --time-of-day Morning`)
+    .addHelpText("after", `\nExamples:\n  $ benji todos list\n  $ benji todos list --screen today\n  $ benji todos list --search "groceries" --json\n  $ benji todos list --show-completed --task-type personal\n  $ benji todos list --only-mandatory --time-of-day Morning\n  $ benji todos list --compact`)
     .action(async (options, command) => {
       ensureAuth();
       const opts = getGlobalOptions(command);

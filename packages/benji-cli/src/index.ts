@@ -13,6 +13,7 @@ const program = new Command("benji")
     "CLI for the Benji API — manage todos, habits, health tracking, and more"
   )
   .option("--json", "Output results as JSON")
+  .option("--compact", "Minimal output (IDs only)")
   .showHelpAfterError("Run 'benji --help' for available commands");
 
 registerCommands(program);
