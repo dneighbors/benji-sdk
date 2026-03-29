@@ -317,6 +317,8 @@ const { data } = await Todos.todosList({
 
 Both variables are read by all three packages (SDK via `configure()`, MCP server and CLI via `initializeFromEnv()`).
 
+For detailed troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
 ## Available MCP Tools
 
 The MCP server registers tools across 19 resource domains. Each tool name follows the pattern `action_resource`.
