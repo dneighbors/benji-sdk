@@ -3,7 +3,7 @@ import { wrapSdkCall, WeightLogs } from "benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";
-import { readStdin, requireForce, parseNumber, toTzDate } from "./shared.js";
+import { readStdin, requireForce, parseNumber, toTzDate, toYmdDate } from "./shared.js";
 
 // TODO(future-story): Missing MCP subcommands to add:
 // - delete-many (weightLogsDeleteMany) — bulk delete weight logs
@@ -26,7 +26,7 @@ export function registerWeightLogsCommand(program: Command): void {
       const opts = getGlobalOptions(command);
       try {
         const body: Record<string, unknown> = {};
-        if (options.date !== undefined) body.date = options.date;
+        if (options.date !== undefined) body.date = toYmdDate(options.date);
         if (options.dateFrom !== undefined) body.dateFrom = options.dateFrom;
         if (options.dateTo !== undefined) body.dateTo = options.dateTo;
 
