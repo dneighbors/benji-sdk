@@ -71,12 +71,12 @@ development_status:
   epic-4-retrospective: optional
 
   # Epic 5: MCP Server — Newly Added Resources
-  epic-5: backlog
-  5-1-weight-log-tools: backlog
-  5-2-todo-view-tools: backlog
-  5-3-project-section-tools: backlog
-  5-4-todo-list-section-tools: backlog
-  5-5-goals-contacts-food-blood-pressure-tools: backlog
+  epic-5: done
+  5-1-weight-log-tools: done
+  5-2-todo-view-tools: done
+  5-3-project-section-tools: done
+  5-4-todo-list-section-tools: done
+  5-5-goals-contacts-food-blood-pressure-tools: done
   epic-5-retrospective: optional
 
   # Epic 6: CLI
