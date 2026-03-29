@@ -8,6 +8,7 @@ import { registerHabitTools } from "./tools/habits.js";
 import { registerMoodTools } from "./tools/mood.js";
 import { registerHydrationTools } from "./tools/hydration.js";
 import { registerFastingTools } from "./tools/fasting.js";
+import { registerWorkoutTools } from "./tools/workouts.js";
 
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
@@ -38,6 +39,7 @@ export function createServer(): McpServer {
   registerMoodTools(mcpServer);
   registerHydrationTools(mcpServer);
   registerFastingTools(mcpServer);
+  registerWorkoutTools(mcpServer);
 
   return mcpServer;
 }
