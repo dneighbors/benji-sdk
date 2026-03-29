@@ -7,20 +7,29 @@ import {
   formatHumanUnknown,
 } from "./formatters.js";
 
+let currentJsonMode = false;
+
 /**
  * Extract global options from process.argv so they work regardless of
  * position (before or after the subcommand).  Commander only parses
  * options defined on the command that owns them, so root-level options
  * like --json and --compact are invisible to leaf commands.
  */
-export function getGlobalOptions(_cmd: Command): {
+export function getGlobalOptions(cmd: Command): {
   json: boolean;
   compact: boolean;
 } {
-  return {
-    json: process.argv.includes("--json"),
-    compact: process.argv.includes("--compact"),
+  const opts = cmd.opts();
+  const result = {
+    json: opts.json ?? false,
+    compact: opts.compact ?? false,
   };
+  currentJsonMode = result.json;
+  return result;
+}
+
+export function isJsonMode(): boolean {
+  return currentJsonMode;
 }
 
 function extractId(obj: Record<string, unknown>): string | undefined {

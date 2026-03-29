@@ -46,7 +46,7 @@ export function registerFastingCommand(program: Command): void {
       ensureAuth();
       const opts = getGlobalOptions(command);
       try {
-        const body: Record<string, unknown> = { fastId };
+        const body: Record<string, unknown> = { id: fastId };
         if (options.timeAgoMinutes !== undefined) body.timeAgoMinutes = parseNumber(options.timeAgoMinutes, "time-ago-minutes");
 
         const result = await wrapSdkCall(

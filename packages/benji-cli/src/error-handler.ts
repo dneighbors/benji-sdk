@@ -1,8 +1,5 @@
 import { BenjiConfigError, BenjiApiError } from "benji-sdk";
-
-function isJsonMode(): boolean {
-  return process.argv.includes("--json");
-}
+import { isJsonMode } from "./output.js";
 
 function formatApiError(error: BenjiApiError): {
   code: string;
