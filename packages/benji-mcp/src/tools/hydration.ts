@@ -95,7 +95,7 @@ export function registerHydrationTools(server: McpServer): void {
       description:
         "Update an existing hydration log. Provide the log ID and the fields to update.",
       inputSchema: {
-        id: z.string().describe("The hydration log ID to update"),
+        id: z.string().min(1).describe("The hydration log ID to update"),
         data: z
           .object({
             name: z
@@ -121,6 +121,18 @@ export function registerHydrationTools(server: McpServer): void {
               .optional()
               .describe("Type of liquid"),
           })
+          .refine(
+            (d) =>
+              d.name !== undefined ||
+              d.amount !== undefined ||
+              d.date !== undefined ||
+              d.countsTowardGoal !== undefined ||
+              d.type !== undefined,
+            {
+              message:
+                "At least one field (name, amount, date, countsTowardGoal, or type) must be provided",
+            },
+          )
           .describe("Fields to update"),
       },
     },
@@ -142,7 +154,7 @@ export function registerHydrationTools(server: McpServer): void {
     {
       description: "Delete a hydration log by ID",
       inputSchema: {
-        id: z.string().describe("The hydration log ID to delete"),
+        id: z.string().min(1).describe("The hydration log ID to delete"),
       },
     },
     async ({ id }) => {
