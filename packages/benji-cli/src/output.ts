@@ -7,19 +7,19 @@ import {
   formatHumanUnknown,
 } from "./formatters.js";
 
-/** Walk the command chain to the root program and extract global options. */
-export function getGlobalOptions(cmd: Command): {
+/**
+ * Extract global options from process.argv so they work regardless of
+ * position (before or after the subcommand).  Commander only parses
+ * options defined on the command that owns them, so root-level options
+ * like --json and --compact are invisible to leaf commands.
+ */
+export function getGlobalOptions(_cmd: Command): {
   json: boolean;
   compact: boolean;
 } {
-  let root = cmd;
-  while (root.parent) {
-    root = root.parent;
-  }
-  const rootOpts = root.opts();
   return {
-    json: rootOpts.json === true,
-    compact: rootOpts.compact === true,
+    json: process.argv.includes("--json"),
+    compact: process.argv.includes("--compact"),
   };
 }
 
