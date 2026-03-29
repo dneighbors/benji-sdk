@@ -29,7 +29,7 @@ export function getGlobalOptions(cmd: Command): {
 }
 
 export function isJsonMode(): boolean {
-  return currentJsonMode;
+  return currentJsonMode || process.argv.includes("--json");
 }
 
 function extractId(obj: Record<string, unknown>): string | undefined {
