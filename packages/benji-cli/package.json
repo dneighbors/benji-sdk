@@ -11,12 +11,18 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "dev": "npx tsx src/index.ts",
+    "start": "node dist/index.js",
+    "postbuild": "chmod +x dist/index.js"
   },
   "dependencies": {
-    "benji-sdk": "workspace:*"
+    "benji-sdk": "workspace:*",
+    "commander": "^14.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   }
 }

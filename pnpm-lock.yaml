@@ -13,7 +13,16 @@ importers:
       benji-sdk:
         specifier: workspace:*
         version: link:../benji-sdk
+      commander:
+        specifier: ^14.0.0
+        version: 14.0.2
     devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.15
+      tsx:
+        specifier: ^4.19.0
+        version: 4.21.0
       typescript:
         specifier: ^5.5.0
         version: 5.9.3
