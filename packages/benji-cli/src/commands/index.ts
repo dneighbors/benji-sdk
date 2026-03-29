@@ -1,116 +1,42 @@
 import { Command } from "commander";
 import { registerTodosCommand } from "./todos.js";
-import { registerStubCommand } from "./stub.js";
+import { registerTagsCommand } from "./tags.js";
+import { registerProjectsCommand } from "./projects.js";
+import { registerTodoListsCommand } from "./todo-lists.js";
+import { registerHabitsCommand } from "./habits.js";
+import { registerMoodCommand } from "./mood.js";
+import { registerHydrationCommand } from "./hydration.js";
+import { registerFastingCommand } from "./fasting.js";
+import { registerWorkoutsCommand } from "./workouts.js";
+import { registerJournalCommand } from "./journal.js";
+import { registerPainEventsCommand } from "./pain-events.js";
+import { registerWeightLogsCommand } from "./weight-logs.js";
+import { registerTodoViewsCommand } from "./todo-views.js";
+import { registerProjectSectionsCommand } from "./project-sections.js";
+import { registerTodoListSectionsCommand } from "./todo-list-sections.js";
+import { registerGoalsCommand } from "./goals.js";
+import { registerContactsCommand } from "./contacts.js";
+import { registerFoodCommand } from "./food.js";
+import { registerBloodPressureCommand } from "./blood-pressure.js";
 
 export function registerCommands(program: Command): void {
   registerTodosCommand(program);
-
-  registerStubCommand(program, "tags", "Manage tags", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "projects", "Manage projects", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "todo-lists", "Manage todo lists", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "habits", "Manage habits", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "mood", "Track mood entries", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "hydration", "Track hydration", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "fasting", "Manage fasting sessions", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "workouts", "Manage workouts", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "journal", "Manage journal entries", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "pain-events", "Track pain events", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "weight-logs", "Track weight logs", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "todo-views", "Manage todo views", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "project-sections", "Manage project sections", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(
-    program,
-    "todo-list-sections",
-    "Manage todo list sections",
-    ["list", "create", "update", "delete"]
-  );
-  registerStubCommand(program, "goals", "Manage goals", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "contacts", "Manage contacts", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "food", "Track food entries", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
-  registerStubCommand(program, "blood-pressure", "Track blood pressure", [
-    "list",
-    "create",
-    "update",
-    "delete",
-  ]);
+  registerTagsCommand(program);
+  registerProjectsCommand(program);
+  registerTodoListsCommand(program);
+  registerHabitsCommand(program);
+  registerMoodCommand(program);
+  registerHydrationCommand(program);
+  registerFastingCommand(program);
+  registerWorkoutsCommand(program);
+  registerJournalCommand(program);
+  registerPainEventsCommand(program);
+  registerWeightLogsCommand(program);
+  registerTodoViewsCommand(program);
+  registerProjectSectionsCommand(program);
+  registerTodoListSectionsCommand(program);
+  registerGoalsCommand(program);
+  registerContactsCommand(program);
+  registerFoodCommand(program);
+  registerBloodPressureCommand(program);
 }
