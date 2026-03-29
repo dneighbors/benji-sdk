@@ -75,15 +75,15 @@ export function parseDate(value: string, optionName: string): string {
 }
 
 /** Convert YYYY-MM-DD to tzDate object for create/update operations. */
-export function toTzDate(dateStr: string): { timezone: string; dateInUsersTimezone: string } {
-  parseDate(dateStr, "date");
+export function toTzDate(dateStr: string, optionName: string = "date"): { timezone: string; dateInUsersTimezone: string } {
+  parseDate(dateStr, optionName);
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   return { timezone, dateInUsersTimezone: dateStr };
 }
 
 /** Convert YYYY-MM-DD to ymd object for list/query operations. */
-export function toYmdDate(dateStr: string): { year: number; month: number; day: number } {
-  parseDate(dateStr, "date");
+export function toYmdDate(dateStr: string, optionName: string = "date"): { year: number; month: number; day: number } {
+  parseDate(dateStr, optionName);
   const [year, month, day] = dateStr.split("-").map(Number);
   return { year, month, day };
 }

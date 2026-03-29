@@ -124,7 +124,7 @@ export function registerTodosCommand(program: Command): void {
         }
         if (title) body.title = title;
         if (options.priority !== undefined) body.priority = options.priority;
-        if (options.dueDate !== undefined) body.dueDate = toTzDate(options.dueDate);
+        if (options.dueDate !== undefined) body.dueDate = toTzDate(options.dueDate, "due-date");
         if (options.projectId !== undefined) body.projectId = options.projectId;
         if (options.tagIds !== undefined) body.tagIds = parseCommaSeparated(options.tagIds);
         if (options.listId !== undefined) body.listId = options.listId;
@@ -159,7 +159,7 @@ export function registerTodosCommand(program: Command): void {
         }
         if (options.title !== undefined) data.title = options.title;
         if (options.priority !== undefined) data.priority = options.priority;
-        if (options.dueDate !== undefined) data.dueDate = toTzDate(options.dueDate);
+        if (options.dueDate !== undefined) data.dueDate = toTzDate(options.dueDate, "due-date");
         if (options.projectId !== undefined) data.projectId = options.projectId;
         if (options.tagIds !== undefined) data.tagIds = parseCommaSeparated(options.tagIds);
 

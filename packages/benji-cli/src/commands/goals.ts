@@ -47,7 +47,7 @@ export function registerGoalsCommand(program: Command): void {
           body = await readStdin();
         }
         if (name) body.name = name;
-        if (options.dueDate !== undefined) body.dueDate = toTzDate(options.dueDate);
+        if (options.dueDate !== undefined) body.dueDate = toTzDate(options.dueDate, "due-date");
         if (options.emoji !== undefined) body.emoji = options.emoji;
         if (options.public) body.public = true;
         if (options.done) body.done = true;
@@ -101,7 +101,7 @@ export function registerGoalsCommand(program: Command): void {
           data = await readStdin();
         }
         if (options.name !== undefined) data.name = options.name;
-        if (options.dueDate !== undefined) data.dueDate = toTzDate(options.dueDate);
+        if (options.dueDate !== undefined) data.dueDate = toTzDate(options.dueDate, "due-date");
         if (options.emoji !== undefined) data.emoji = options.emoji;
         if (options.public !== undefined) data.public = options.public;
         if (options.done !== undefined) data.done = options.done;
