@@ -224,6 +224,7 @@ export function registerTodoTools(server: McpServer): void {
             title: z.string().optional(),
             ...todoFieldsSchema,
           })
+          .refine((obj) => Object.keys(obj).length > 0, { message: "At least one field must be provided to update" })
           .describe("Fields to update"),
       },
     },

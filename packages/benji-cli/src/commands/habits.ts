@@ -152,8 +152,7 @@ export function registerHabitsCommand(program: Command): void {
           completionType: options.completionType,
         };
         if (options.date !== undefined) {
-          parseDate(options.date, "date");
-          body.date = { dateInUsersTimezone: options.date };
+          body.date = toTzDate(options.date);
         }
 
         const result = await wrapSdkCall(

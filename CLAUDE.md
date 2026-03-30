@@ -47,7 +47,7 @@ After generation, `fix-imports.mjs` adds `.js` extensions to relative imports fo
 - **pnpm workspace monorepo:** `packages/*` defined in `pnpm-workspace.yaml`
 - **Dependency direction:** `benji-mcp` and `benji-cli` depend on `benji-sdk` via `workspace:*`. Import public exports only -- never reach into `src/client/` internals.
 - **Auth:** always via `BENJI_API_KEY` env var. Both MCP and CLI call `initializeFromEnv()` from `benji-sdk`, which reads the env var and calls `configure()`.
-- **Optional `BENJI_BASE_URL`** env var overrides the default API base (`https://app.benji.so/api/rest`).
+- **Optional `BENJI_BASE_URL`** env var overrides the default API base (`https://alpha.benji.so/api/rest`).
 - **All API calls go through `wrapSdkCall()`** which normalizes the `{ data, error, response }` tuple from `@hey-api/openapi-ts` into data on success or throws `BenjiApiError` on failure. Network errors are also caught and wrapped with status 0.
 - **Error hierarchy:** `BenjiError` (base) -> `BenjiConfigError` (missing API key), `BenjiApiError` (API errors with `status`, `code`, `message`, `issues`).
 - **MCP server:** stdio transport exclusively. No HTTP, no SSE.

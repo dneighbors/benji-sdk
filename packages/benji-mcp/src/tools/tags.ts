@@ -108,6 +108,7 @@ export function registerTagTools(server: McpServer): void {
               .optional()
               .describe("ID of the tag group"),
           })
+          .refine((obj) => Object.keys(obj).length > 0, { message: "At least one field must be provided to update" })
           .describe("Fields to update"),
       },
     },

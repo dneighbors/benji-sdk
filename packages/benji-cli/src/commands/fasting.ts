@@ -3,7 +3,7 @@ import { wrapSdkCall, Fasting } from "@dneighbors/benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";
-import { readStdin, requireForce, parseNumber } from "./shared.js";
+import { readStdin, requireForce, parseNumber, parseDate } from "./shared.js";
 
 export function registerFastingCommand(program: Command): void {
   const cmd = program
@@ -24,7 +24,8 @@ export function registerFastingCommand(program: Command): void {
         if (options.hours !== undefined) body.hours = parseNumber(options.hours, "hours");
         if (options.startTime !== undefined) {
           const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-          body.startTime = { timezone, dateInUsersTimezone: options.startTime };
+          const dateOnly = options.startTime.slice(0, 10);
+          body.startTime = { timezone, dateInUsersTimezone: dateOnly };
         }
 
         const result = await wrapSdkCall(
@@ -99,8 +100,8 @@ export function registerFastingCommand(program: Command): void {
       const opts = getGlobalOptions(command);
       try {
         const body: Record<string, unknown> = {};
-        if (options.dateFrom !== undefined) body.dateFrom = options.dateFrom;
-        if (options.dateTo !== undefined) body.dateTo = options.dateTo;
+        if (options.dateFrom !== undefined) { parseDate(options.dateFrom, "date-from"); body.dateFrom = options.dateFrom; }
+        if (options.dateTo !== undefined) { parseDate(options.dateTo, "date-to"); body.dateTo = options.dateTo; }
 
         const result = await wrapSdkCall(
           Fasting.fastingList({ body } as Parameters<typeof Fasting.fastingList>[0]),

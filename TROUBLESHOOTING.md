@@ -82,7 +82,7 @@ BENJI_API_KEY environment variable is required. Get your API key from https://ap
 
 **Purpose:** Override the API base URL for self-hosted Benji instances or development/staging environments.
 
-**Default:** `https://app.benji.so/api/rest`
+**Default:** `https://alpha.benji.so/api/rest`
 
 **When to use:** Only set this if you are running a self-hosted Benji instance or connecting to a development/staging environment. Most users do not need this.
 
@@ -103,9 +103,9 @@ export BENJI_BASE_URL="https://my-instance.com/api/rest/"
 
 1. `initializeFromEnv()` reads `process.env.BENJI_BASE_URL` (may be `undefined`)
 2. Passes it to `configure({ apiKey, baseUrl })`
-3. `configure()` uses `options.baseUrl ?? "https://app.benji.so/api/rest"` as the base for all API request URLs
+3. `configure()` uses `options.baseUrl ?? "https://alpha.benji.so/api/rest"` as the base for all API request URLs
 
-If `BENJI_BASE_URL` is not set, the default `https://app.benji.so/api/rest` is used automatically.
+If `BENJI_BASE_URL` is not set, the default `https://alpha.benji.so/api/rest` is used automatically.
 
 ### Which Packages Read Which Variables
 
@@ -243,7 +243,7 @@ If the original error has no message, the fallback is `"Network request failed"`
 
 ```bash
 # Test connectivity to the default API endpoint
-curl -I https://app.benji.so/api/rest
+curl -I https://alpha.benji.so/api/rest
 
 # If using a custom base URL, test that instead
 curl -I $BENJI_BASE_URL

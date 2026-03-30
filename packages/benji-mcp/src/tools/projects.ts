@@ -96,6 +96,7 @@ export function registerProjectTools(server: McpServer): void {
             name: z.string().optional(),
             ...projectFieldsSchema,
           })
+          .refine((obj) => Object.keys(obj).length > 0, { message: "At least one field must be provided to update" })
           .describe("Fields to update"),
       },
     },

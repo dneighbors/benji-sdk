@@ -14,7 +14,8 @@ const program = new Command("benji")
   )
   .option("--json", "Output results as JSON")
   .option("--compact", "Minimal output (IDs only)")
-  .showHelpAfterError("Run 'benji --help' for available commands");
+  .showHelpAfterError("Run 'benji --help' for available commands")
+  .exitOverride();
 
 registerCommands(program);
 

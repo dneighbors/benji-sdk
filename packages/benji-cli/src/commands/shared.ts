@@ -92,6 +92,12 @@ export function toYmdDate(dateStr: string, optionName: string = "date"): { year:
  * Parse a numeric string. Exits with actionable error if NaN.
  */
 export function parseNumber(value: string, optionName: string): number {
+  if (value.trim() === "") {
+    console.error(
+      `Error: Invalid number for ${optionName}. Expected a numeric value. Example: --${optionName} 5`
+    );
+    process.exit(1);
+  }
   const n = Number(value);
   if (Number.isNaN(n)) {
     console.error(

@@ -24,8 +24,8 @@ async function fixImportsInFile(filePath) {
   for (const match of matches) {
     const [fullMatch, prefix, importPath, suffix] = match;
 
-    // Skip if already has .js extension
-    if (importPath.endsWith('.js')) continue;
+    // Skip if already has a file extension
+    if (/\.[a-z0-9]+$/i.test(importPath)) continue;
 
     // Check if it's a directory import
     const isDir = await isDirectory(filePath, importPath);

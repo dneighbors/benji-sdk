@@ -50,6 +50,8 @@ export function registerPainEventsCommand(program: Command): void {
         let body: Record<string, unknown> = {};
         if (options.stdin) {
           body = await readStdin();
+          if (typeof body.date === "string") body.date = toTzDate(body.date);
+          if (body.painLevel !== undefined) body.painLevel = Number(body.painLevel);
         }
         if (options.date !== undefined) body.date = toTzDate(options.date);
         if (options.painLevel !== undefined) body.painLevel = parseNumber(options.painLevel, "pain-level");
@@ -100,6 +102,8 @@ export function registerPainEventsCommand(program: Command): void {
         let data: Record<string, unknown> = {};
         if (options.stdin) {
           data = await readStdin();
+          if (typeof data.date === "string") data.date = toTzDate(data.date);
+          if (data.painLevel !== undefined) data.painLevel = Number(data.painLevel);
         }
         if (options.date !== undefined) data.date = toTzDate(options.date);
         if (options.painLevel !== undefined) data.painLevel = parseNumber(options.painLevel, "pain-level");
