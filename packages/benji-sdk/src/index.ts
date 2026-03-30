@@ -7,7 +7,7 @@ import { client } from "./client/client.gen.js";
 export interface BenjiConfig {
   /** Your Benji API key */
   apiKey: string;
-  /** Optional custom base URL (defaults to https://app.benji.so/api/rest) */
+  /** Optional custom base URL (defaults to https://alpha.benji.so/api/rest) */
   baseUrl?: string;
 }
 
@@ -29,7 +29,7 @@ export interface BenjiConfig {
  */
 export function configure(options: BenjiConfig) {
   client.setConfig({
-    baseUrl: options.baseUrl ?? "https://app.benji.so/api/rest",
+    baseUrl: options.baseUrl ?? "https://alpha.benji.so/api/rest",
     headers: {
       "x-api-key": options.apiKey,
     },

@@ -1,6 +1,6 @@
 {
   "name": "@dneighbors/benji-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official TypeScript SDK for the Benji API - Your personal life operating system",
   "type": "module",
   "main": "./dist/index.js",
