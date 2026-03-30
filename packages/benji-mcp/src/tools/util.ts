@@ -18,11 +18,43 @@ export const tzDateSchema = z.object({
 });
 
 /**
+ * Recursively strip null, undefined, empty strings, and empty arrays
+ * from an object tree. Preserves false, 0, and non-empty values.
+ */
+function compact(data: unknown): unknown {
+  if (data === null || data === undefined) return undefined;
+
+  if (Array.isArray(data)) {
+    const compacted = data.map(compact).filter((v) => v !== undefined);
+    return compacted.length > 0 ? compacted : undefined;
+  }
+
+  if (typeof data === "object") {
+    const result: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(data)) {
+      const compacted = compact(value);
+      if (
+        compacted !== undefined &&
+        compacted !== "" &&
+        !(Array.isArray(compacted) && compacted.length === 0)
+      ) {
+        result[key] = compacted;
+      }
+    }
+    return Object.keys(result).length > 0 ? result : undefined;
+  }
+
+  return data;
+}
+
+/**
  * Return a structured MCP success result.
+ * Strips null/empty values to reduce token usage for AI consumers.
  */
 export function toolResult(data: unknown) {
+  const compacted = compact(data) ?? { success: true };
   return {
-    content: [{ type: "text" as const, text: JSON.stringify(data) }],
+    content: [{ type: "text" as const, text: JSON.stringify(compacted) }],
   };
 }
 

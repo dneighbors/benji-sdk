@@ -92,3 +92,10 @@ development_status:
   7-2-claude-md-and-config-snippets: done
   7-3-env-var-docs-and-troubleshooting: done
   epic-7-retrospective: optional
+
+  # Epic 8: MCP Response Optimization & Missing Get Tools
+  epic-8: backlog
+  8-1-add-missing-get-mcp-tools: backlog
+  8-2-list-response-summarization: backlog
+  8-3-add-missing-get-cli-commands: backlog
+  epic-8-retrospective: optional

@@ -55,6 +55,12 @@ Epic breakdown for adding MCP server and CLI packages to the existing Benji Type
 | FR17 | MCP config snippets provided for Cursor/Claude setup | MVP |
 | FR18 | Environment variable and troubleshooting docs | MVP |
 
+### MCP Optimization (FR19-FR20)
+| FR | Description | Scope |
+|----|-------------|-------|
+| FR19 | MCP tools expose single-item get endpoints for all resource domains | Post-MVP |
+| FR20 | MCP list responses are summarized to reduce token usage for AI consumers | Post-MVP |
+
 ---
 
 ## FR Coverage Map
@@ -68,6 +74,7 @@ Epic breakdown for adding MCP server and CLI packages to the existing Benji Type
 | Epic 5 | FR7, FR8, FR9, FR10 |
 | Epic 6 | FR13, FR14, FR15 |
 | Epic 7 | FR16, FR17, FR18 |
+| Epic 8 | FR19, FR20 |
 
 ---
 
@@ -519,3 +526,58 @@ I want documentation for all env vars and common error troubleshooting,
 So that I can debug setup issues.
 
 **Prerequisites:** Epics 2-3 complete
+
+---
+
+## Epic 8: MCP Response Optimization & Missing Get Tools
+
+**Goal:** Add single-item `get_*` tools for all domains missing them, then add list response summarization to reduce token usage for AI consumers.
+
+**Background:** MCP list responses return full API objects with 30+ fields per item, producing 50-80K character responses that can exceed AI context limits. Story 8-1 adds missing `get_*` tools so individual items can be fetched with full detail. Story 8-2 then safely summarizes list responses (compact field sets) since the AI can drill into any item via `get_*`. Story 8-3 adds corresponding CLI `get` commands.
+
+### Story 8.1: Add missing get_* MCP tools
+
+As an AI assistant,
+I want `get_*` tools for every domain that has a list tool,
+So that I can fetch full detail for a specific item by ID.
+
+**Domains missing get tools (SDK method exists):**
+- `get_todo` — `Todos.todosGet({ body: { id } })`
+- `get_tag` — `Tags.tagsGet({ body: { id } })`
+- `get_project` — `Projects.projectsGet({ body: { id } })`
+- `get_todo_list` — `TodoLists.todoListsGet({ body: { id } })`
+- `get_habit` — `Habits.habitsGet({ body: { id } })`
+- `get_mood` — `Mood.moodGet({ body: { id } })`
+
+**Acceptance Criteria:**
+
+**Given** a valid resource ID, **When** `get_<resource>` is called, **Then** returns the full resource object with all fields
+**And** each tool has JSON schema input validation for the `id` parameter
+**And** errors are handled via `handleToolError()`
+
+**Prerequisites:** Epics 2-5 complete
+
+### Story 8.2: Add list response summarization
+
+As an AI assistant,
+I want list tool responses to contain only essential fields,
+So that I can work within context limits while still browsing resources.
+
+**Acceptance Criteria:**
+
+**Given** a list tool call (e.g., `list_todos`), **When** the response is generated, **Then** each item contains only key fields (id, title/name, status, priority, dates, tags) and a `count` of total items
+**And** the AI can call the corresponding `get_*` tool to retrieve full detail for any item
+**And** a summarizer registry in `packages/benji-mcp/src/tools/summarizers.ts` allows per-domain field selection
+**And** domains without a registered summarizer still get null-stripping (compact) only
+
+**Prerequisites:** Story 8.1
+
+### Story 8.3: Add missing get CLI commands
+
+As a user,
+I want `benji <resource> get <id>` commands for domains that only have list/create/update/delete,
+So that I can inspect a single resource from the terminal.
+
+**Domains:** todos, tags, projects, todo-lists, habits, mood
+
+**Prerequisites:** Story 8.1
