@@ -3,7 +3,7 @@ import { wrapSdkCall, Journal } from "@dneighbors/benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";
-import { readStdin, requireForce, toTzDate } from "./shared.js";
+import { readStdin, requireForce, toTzDate, parseDate } from "./shared.js";
 
 // TODO(future-story): Missing MCP subcommands to add:
 // - delete-many (journalEntriesDeleteMany) — bulk delete journal entries
@@ -24,8 +24,8 @@ export function registerJournalCommand(program: Command): void {
       const opts = getGlobalOptions(command);
       try {
         const body: Record<string, unknown> = {};
-        if (options.dateFrom !== undefined) body.dateFrom = options.dateFrom;
-        if (options.dateTo !== undefined) body.dateTo = options.dateTo;
+        if (options.dateFrom !== undefined) { parseDate(options.dateFrom, "date-from"); body.dateFrom = options.dateFrom; }
+        if (options.dateTo !== undefined) { parseDate(options.dateTo, "date-to"); body.dateTo = options.dateTo; }
 
         const result = await wrapSdkCall(
           Journal.journalEntriesList({ body } as Parameters<typeof Journal.journalEntriesList>[0]),

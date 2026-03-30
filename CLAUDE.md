@@ -11,7 +11,7 @@ Both `benji-mcp` and `benji-cli` depend on `benji-sdk` via `workspace:*`.
 
 ## Commands
 
-```
+```bash
 pnpm install                         # Install all dependencies
 pnpm build                           # Build all packages (SDK generate + compile, then MCP + CLI)
 pnpm --filter benji-sdk build        # Rebuild SDK only (generate + fix-imports + tsc)

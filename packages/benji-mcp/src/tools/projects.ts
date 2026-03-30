@@ -67,7 +67,7 @@ export function registerProjectTools(server: McpServer): void {
       description:
         "Create a new project. Only name is required; all other fields are optional.",
       inputSchema: {
-        name: z.string().describe("The project name (required)"),
+        name: z.string().min(1).describe("The project name (required)"),
         ...projectFieldsSchema,
       },
     },
@@ -90,7 +90,7 @@ export function registerProjectTools(server: McpServer): void {
       description:
         "Update an existing project. Provide the project ID and the fields to update.",
       inputSchema: {
-        id: z.string().describe("The project ID to update"),
+        id: z.string().min(1).describe("The project ID to update"),
         data: z
           .object({
             name: z.string().optional(),
@@ -118,7 +118,7 @@ export function registerProjectTools(server: McpServer): void {
     {
       description: "Delete a project by ID",
       inputSchema: {
-        id: z.string().describe("The project ID to delete"),
+        id: z.string().min(1).describe("The project ID to delete"),
       },
     },
     async ({ id }) => {

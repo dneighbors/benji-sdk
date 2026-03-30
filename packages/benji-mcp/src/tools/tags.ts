@@ -83,7 +83,7 @@ export function registerTagTools(server: McpServer): void {
       description:
         "Update an existing tag. Provide the tag ID and the fields to update.",
       inputSchema: {
-        id: z.string().describe("The tag ID to update"),
+        id: z.string().min(1).describe("The tag ID to update"),
         data: z
           .object({
             name: z.string().optional().describe("New tag name"),
@@ -134,7 +134,7 @@ export function registerTagTools(server: McpServer): void {
     {
       description: "Delete a tag by ID",
       inputSchema: {
-        id: z.string().describe("The tag ID to delete"),
+        id: z.string().min(1).describe("The tag ID to delete"),
       },
     },
     async ({ id }) => {

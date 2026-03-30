@@ -72,7 +72,7 @@ BENJI_API_KEY=your-key benji todos list --screen today
 
 **What happens when missing:** `initializeFromEnv()` throws a `BenjiConfigError` with this exact message:
 
-```
+```text
 BENJI_API_KEY environment variable is required. Get your API key from https://app.benji.so/settings
 ```
 
@@ -152,13 +152,13 @@ This is the most common error. It means `BENJI_API_KEY` is not set in the curren
 
 **SDK** -- throws `BenjiConfigError`:
 
-```
+```text
 BenjiConfigError: BENJI_API_KEY environment variable is required. Get your API key from https://app.benji.so/settings
 ```
 
 **MCP server** -- prints the error message to stderr and exits with code 1:
 
-```
+```text
 BENJI_API_KEY environment variable is required. Get your API key from https://app.benji.so/settings
 ```
 
@@ -166,7 +166,7 @@ The MCP client (Cursor, Claude Code, Claude Desktop) will show a connection fail
 
 **CLI (human mode)** -- prints to stderr and exits with code 1:
 
-```
+```text
 Error: BENJI_API_KEY environment variable is required. Get your API key from https://app.benji.so/settings
 Example: BENJI_API_KEY=your-key benji todos list
 ```
@@ -199,7 +199,7 @@ An invalid API key is **not** caught at startup. The `initializeFromEnv()` funct
 
 **CLI (human mode)**:
 
-```
+```text
 Error [401] HTTP_401: <message from API>
 ```
 
@@ -225,7 +225,7 @@ This means the HTTP request never reached the Benji API or no response was recei
 
 In `wrapSdkCall()` (`packages/benji-sdk/src/wrapper.ts`), when the SDK promise rejects (as opposed to returning `{ data, error, response }`), the error is caught and wrapped:
 
-```
+```text
 BenjiApiError { status: 0, code: "NETWORK_ERROR", message: "<original error message>" }
 ```
 
@@ -300,7 +300,7 @@ The response has `isError: true`.
 
 **How issues appear in CLI (human mode):**
 
-```
+```text
 Error [400] HTTP_400: Validation failed
   - screen is required
 ```
@@ -370,7 +370,7 @@ This means the API returned a 2xx success status but the response body contained
 
 The MCP server calls `initializeFromEnv()` at startup (`packages/benji-mcp/src/index.ts`). If `BENJI_API_KEY` is not set, it prints the error to stderr and exits with code 1:
 
-```
+```text
 BENJI_API_KEY environment variable is required. Get your API key from https://app.benji.so/settings
 ```
 
@@ -524,7 +524,7 @@ benji todos delete abc123 --force
 
 Without `--force`, the CLI prints an error and exits with code 1:
 
-```
+```text
 Error: --force is required for delete. Example: benji todos delete <id> --force
 ```
 
@@ -541,7 +541,7 @@ benji todos list --screen today --json 2>/dev/null | jq .
 
 In human mode (default):
 
-```
+```text
 Error [<status>] <code>: <message>
   - <issue message>
   - <issue message>
@@ -555,7 +555,7 @@ In JSON mode (`--json`):
 
 For config errors in human mode:
 
-```
+```text
 Error: <message>
 Example: BENJI_API_KEY=your-key benji todos list
 ```
@@ -568,7 +568,7 @@ For config errors in JSON mode:
 
 For unexpected errors (non-Benji exceptions) in human mode:
 
-```
+```text
 Unexpected error: <message>
 ```
 

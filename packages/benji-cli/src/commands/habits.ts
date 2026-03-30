@@ -22,8 +22,8 @@ export function registerHabitsCommand(program: Command): void {
       const opts = getGlobalOptions(command);
       try {
         const body: Record<string, unknown> = {};
-        if (options.dateFrom !== undefined) body.dateFrom = options.dateFrom;
-        if (options.dateTo !== undefined) body.dateTo = options.dateTo;
+        if (options.dateFrom !== undefined) { parseDate(options.dateFrom, "date-from"); body.dateFrom = options.dateFrom; }
+        if (options.dateTo !== undefined) { parseDate(options.dateTo, "date-to"); body.dateTo = options.dateTo; }
         if (options.habitIds !== undefined) body.habitIds = parseCommaSeparated(options.habitIds);
 
         const result = await wrapSdkCall(

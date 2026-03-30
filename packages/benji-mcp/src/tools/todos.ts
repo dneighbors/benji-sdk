@@ -76,6 +76,7 @@ export function registerTodoTools(server: McpServer): void {
         screen: z.enum(["today", "overview", "inbox"]).optional(),
         date: z
           .string()
+          .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be YYYY-MM-DD format")
           .optional()
           .describe("ISO date string, e.g. 2026-03-27. Only string format supported."),
         search: z
@@ -128,7 +129,7 @@ export function registerTodoTools(server: McpServer): void {
     {
       description: "List todos filtered by tag ID",
       inputSchema: {
-        tagId: z.string().describe("The tag ID to filter by"),
+        tagId: z.string().min(1).describe("The tag ID to filter by"),
         taskType: z.enum(["personal", "work", "both"]).optional(),
       },
     },
@@ -150,7 +151,7 @@ export function registerTodoTools(server: McpServer): void {
     {
       description: "List todos filtered by project ID",
       inputSchema: {
-        projectId: z.string().describe("The project ID to filter by"),
+        projectId: z.string().min(1).describe("The project ID to filter by"),
         taskType: z.enum(["personal", "work", "both"]).optional(),
       },
     },
@@ -172,7 +173,7 @@ export function registerTodoTools(server: McpServer): void {
     {
       description: "List todos filtered by todo list ID",
       inputSchema: {
-        listId: z.string().describe("The todo list ID to filter by"),
+        listId: z.string().min(1).describe("The todo list ID to filter by"),
         taskType: z.enum(["personal", "work", "both"]).optional(),
       },
     },
@@ -195,7 +196,7 @@ export function registerTodoTools(server: McpServer): void {
       description:
         "Create a new todo. Only title is required; all other fields are optional.",
       inputSchema: {
-        title: z.string().describe("The todo title (required)"),
+        title: z.string().min(1).describe("The todo title (required)"),
         ...todoFieldsSchema,
       },
     },
@@ -218,7 +219,7 @@ export function registerTodoTools(server: McpServer): void {
       description:
         "Update an existing todo. Provide the todo ID and the fields to update.",
       inputSchema: {
-        id: z.string().describe("The todo ID to update"),
+        id: z.string().min(1).describe("The todo ID to update"),
         data: z
           .object({
             title: z.string().optional(),
@@ -246,7 +247,7 @@ export function registerTodoTools(server: McpServer): void {
     {
       description: "Toggle the completion status of a todo",
       inputSchema: {
-        id: z.string().describe("The todo ID to toggle"),
+        id: z.string().min(1).describe("The todo ID to toggle"),
       },
     },
     async ({ id }) => {
@@ -267,7 +268,7 @@ export function registerTodoTools(server: McpServer): void {
     {
       description: "Delete a todo by ID",
       inputSchema: {
-        id: z.string().describe("The todo ID to delete"),
+        id: z.string().min(1).describe("The todo ID to delete"),
       },
     },
     async ({ id }) => {
