@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { wrapSdkCall, Hydration } from "benji-sdk";
+import { wrapSdkCall, Hydration } from "@dneighbors/benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";

@@ -10,7 +10,7 @@ importers:
 
   packages/benji-cli:
     dependencies:
-      benji-sdk:
+      '@dneighbors/benji-sdk':
         specifier: workspace:*
         version: link:../benji-sdk
       commander:
@@ -29,12 +29,12 @@ importers:
 
   packages/benji-mcp:
     dependencies:
+      '@dneighbors/benji-sdk':
+        specifier: workspace:*
+        version: link:../benji-sdk
       '@modelcontextprotocol/sdk':
         specifier: ^1.28.0
         version: 1.28.0(zod@3.25.76)
-      benji-sdk:
-        specifier: workspace:*
-        version: link:../benji-sdk
       zod:
         specifier: ^3.25.0
         version: 3.25.76

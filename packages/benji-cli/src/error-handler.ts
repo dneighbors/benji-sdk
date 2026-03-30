@@ -1,4 +1,4 @@
-import { BenjiConfigError, BenjiApiError } from "benji-sdk";
+import { BenjiConfigError, BenjiApiError } from "@dneighbors/benji-sdk";
 import { isJsonMode } from "./output.js";
 
 function formatApiError(error: BenjiApiError): {

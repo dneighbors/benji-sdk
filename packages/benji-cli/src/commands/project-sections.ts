@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { wrapSdkCall, ProjectSections } from "benji-sdk";
+import { wrapSdkCall, ProjectSections } from "@dneighbors/benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";

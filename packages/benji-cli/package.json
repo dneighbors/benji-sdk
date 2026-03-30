@@ -1,14 +1,22 @@
 {
-  "name": "benji-cli",
+  "name": "@dneighbors/benji-cli",
   "version": "0.1.0",
   "description": "CLI for Benji API",
   "type": "module",
-  "private": true,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "bin": {
     "benji": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
@@ -17,12 +25,22 @@
     "postbuild": "chmod +x dist/index.js"
   },
   "dependencies": {
-    "benji-sdk": "workspace:*",
+    "@dneighbors/benji-sdk": "workspace:*",
     "commander": "^14.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
+  },
+  "license": "MIT",
+  "author": "dneighbors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dneighbors/benji-sdk.git",
+    "directory": "packages/benji-cli"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   }
 }

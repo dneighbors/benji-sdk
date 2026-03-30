@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { PainEvents, wrapSdkCall } from "benji-sdk";
+import { PainEvents, wrapSdkCall } from "@dneighbors/benji-sdk";
 import {
   toolResult,
   handleToolError,

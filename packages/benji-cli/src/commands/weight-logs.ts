@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { wrapSdkCall, WeightLogs } from "benji-sdk";
+import { wrapSdkCall, WeightLogs } from "@dneighbors/benji-sdk";
 import { ensureAuth } from "../auth.js";
 import { getGlobalOptions, outputResult } from "../output.js";
 import { handleCommandError } from "../error-handler.js";

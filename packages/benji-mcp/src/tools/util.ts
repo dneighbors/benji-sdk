@@ -1,4 +1,4 @@
-import { BenjiApiError } from "benji-sdk";
+import { BenjiApiError } from "@dneighbors/benji-sdk";
 import { z } from "zod";
 
 /** Year/month/day date schema with range validation. */

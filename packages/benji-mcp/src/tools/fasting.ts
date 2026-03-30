@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { Fasting, wrapSdkCall } from "benji-sdk";
+import { Fasting, wrapSdkCall } from "@dneighbors/benji-sdk";
 import { toolResult, handleToolError, tzDateSchema } from "./util.js";
 
 /**

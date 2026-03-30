@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { Habits, wrapSdkCall } from "benji-sdk";
+import { Habits, wrapSdkCall } from "@dneighbors/benji-sdk";
 import { toolResult, handleToolError } from "./util.js";
 
 /** Shared habit fields used by both create and update. */

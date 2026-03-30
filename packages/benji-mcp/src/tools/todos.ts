@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { Todos, wrapSdkCall } from "benji-sdk";
+import { Todos, wrapSdkCall } from "@dneighbors/benji-sdk";
 import { toolResult, handleToolError } from "./util.js";
 
 /** Date sub-schema used by create/update todo fields. */

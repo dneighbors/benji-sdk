@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { TodoViews, wrapSdkCall } from "benji-sdk";
+import { TodoViews, wrapSdkCall } from "@dneighbors/benji-sdk";
 import { toolResult, handleToolError } from "./util.js";
 
 /**

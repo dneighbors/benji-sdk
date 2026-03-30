@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { Food, wrapSdkCall } from "benji-sdk";
+import { Food, wrapSdkCall } from "@dneighbors/benji-sdk";
 import {
   toolResult,
   handleToolError,

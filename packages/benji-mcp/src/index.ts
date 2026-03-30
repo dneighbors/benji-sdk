@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { initializeFromEnv, BenjiConfigError } from "benji-sdk";
+import { initializeFromEnv, BenjiConfigError } from "@dneighbors/benji-sdk";
 import { createServer } from "./server.js";
 
 async function main(): Promise<void> {

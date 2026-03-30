@@ -1,4 +1,4 @@
-import { initializeFromEnv } from "benji-sdk";
+import { initializeFromEnv } from "@dneighbors/benji-sdk";
 import { handleCommandError } from "./error-handler.js";
 
 export function ensureAuth(): void {
