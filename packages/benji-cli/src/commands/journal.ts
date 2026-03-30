@@ -104,6 +104,11 @@ export function registerJournalCommand(program: Command): void {
         if (options.title !== undefined) data.title = options.title;
         if (options.date !== undefined) data.date = toTzDate(options.date);
 
+        if (Object.keys(data).length === 0) {
+          console.error("Error: No fields provided to update. Use --content, --title, --date, or --stdin.");
+          process.exit(1);
+        }
+
         const result = await wrapSdkCall(
           Journal.journalEntriesUpdate({ path: { id }, body: { data } }),
         );

@@ -234,7 +234,7 @@ If the original error has no message, the fallback is `"Network request failed"`
 **Common causes:**
 
 - No internet connection
-- DNS resolution failure (cannot resolve `app.benji.so`)
+- DNS resolution failure (cannot resolve `alpha.benji.so`)
 - `BENJI_BASE_URL` set to a wrong host or unreachable URL
 - Firewall or proxy blocking outbound HTTPS connections
 - The Benji API is temporarily down
@@ -249,7 +249,7 @@ curl -I https://alpha.benji.so/api/rest
 curl -I $BENJI_BASE_URL
 
 # Check DNS resolution
-nslookup app.benji.so
+nslookup alpha.benji.so
 ```
 
 **How it appears in MCP vs CLI:**
